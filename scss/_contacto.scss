@@ -1,0 +1,36 @@
+#gridContac{
+    display: grid;
+    grid-template-columns: 30% 15%;
+    grid-template-rows:700px;
+    grid-template-areas: "a1 a2";
+    justify-content: center;
+}
+.formContac{
+    grid-area:a1;
+    background-color:$colorAzul;
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    label{
+        font-weight: bold;
+    }
+    legend{
+        font-weight: bold;
+    } 
+    .btn{
+        margin-left: 150px;
+    }
+    }
+
+.gatoLado{
+    grid-area:a2;
+    margin-right: 100px;
+    margin-top: 50px;
+    
+ img{
+    grid-area:a2;
+    width: 200px;
+    margin-right: 200px;
+   
+ }
+}

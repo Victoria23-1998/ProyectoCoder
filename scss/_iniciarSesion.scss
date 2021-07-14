@@ -1,0 +1,54 @@
+
+#gridSesion{
+    display: grid;
+    grid-template-columns: 30%;
+    grid-template-rows: 100px 330px;
+    grid-template-areas: "a1"
+    "a2";
+    justify-content: center;
+}
+.imagenS{
+    grid-area: a1;
+    justify-self: center;
+    img{
+        width: 100px;
+       
+    }
+}
+#formInicioSesion{
+    
+    background-color: $colorAzul;
+    width:100%;
+    border-radius: 15px;
+    height: 330px;
+    grid-area: a2;
+    form{
+        
+       input{
+         width:80%;
+         margin-left: auto;
+         margin-right: auto;
+       }
+       label{
+         
+        margin-left:170px;
+        font-weight: bold;
+        
+       }
+       #emailHelp{
+           margin-left: 30px;
+       }
+      .form-label1{
+       margin-top: 20px;
+      }
+      .btn{
+          margin-left: 80px;
+      }
+     a{
+         margin-left: 80px;
+         margin-bottom: 20px;
+         font-weight: bold;
+     }
+    }
+
+}

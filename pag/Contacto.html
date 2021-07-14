@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Contacto</title>
+    <meta name="description" content="crea tu cuenta para adoptar">
+    <link rel="stylesheet" href="../css/estilosCss.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-liht">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../img/logo2.png" alt="" width="100"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pag/Adoptar.html">Adoptar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pag/Donaciones.html">Donar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pag/Transito.html">Transito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pag/Contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pag/iniciarSesion.html">Iniciar Sesión</a>
+              </li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+             
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+        
+    </header>
+    <main>
+        <!--aqui va el formulario-->
+      <div id="gridContac">
+        <div class="gatoLado">
+          <img src="../img/gatoLado.png" alt="">
+        </div>
+      <div class="formContac"> 
+        <div class="mb-3">
+            <legend class="text-center header">Contact us</legend>
+            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">DNI</label>
+            <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="">
+            
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Email</label>
+            <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="">
+            
+          </div>
+          <select class="form-select" aria-label="Default select example" >
+            <option selected>Motivo del contacto</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba su mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div> 
+      </div>
+    </main>
+    <footer>
+         <!--aqui van las redes sociales-->
+    <div class="contenedorFooter">
+        <ul>
+           <a href="">
+               <img src="../img/facebook.png" alt="Facebook" width="35px" > 
+           </a>
+           <a href="">
+               <img src="../img/instagram.png" alt="twitter" width="35px">
+           </a>
+           <a href="">
+               <img src="../img/linkedin.png" alt="instagram" width="35px">
+           </a>
+           <a href="">
+               <img src="../img/gorjeo.png" alt="linkedin" width="35px">
+           </a>
+        </ul>
+       </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+</body>
+</html>

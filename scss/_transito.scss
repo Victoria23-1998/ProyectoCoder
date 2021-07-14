@@ -1,0 +1,36 @@
+#flexTransito{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+   
+  }
+  
+   .contenedorConseguir {
+    background-color:#a8d3da;
+    height: auto;
+    align-self: center;
+    padding: 30px;
+    width: 30%;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-left: 120px;
+       p{
+     text-align:center;
+   }
+}
+  .contenedorTransito{
+    margin-right: 50px;
+  }
+  .formuTran{
+      .row{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border:#b7c6ca 1px solid;
+        padding: 5px;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+  }
