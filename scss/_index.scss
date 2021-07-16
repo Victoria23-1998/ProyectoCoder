@@ -2,95 +2,73 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: 0;
+    box-sizing:border-box;
 }
+html { /* etiqueta raíz */
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 2rem;
+   padding-left: 30px;
+   padding-right: 30px;
+    overflow-x: auto;
+    p{
+        text-align: justify;
+    }
+}
+.flexMain1{
     
+    display: flex;
+    background-color: $colorMorado;
+    margin-top: 1.875rem;
+    border-radius: 15px;
+   
+    .contenedorTexto{
+        padding: 1.25rem;
+    }
+    .imagenP{
+        width: 80%;
+        padding: 1.25rem;
+        img{
+            width: 100%;
+        }
+    }
+    h1{
+       
+        color:#a8d3da ;
+        -webkit-text-stroke: 2px #132c33;
+        font-size:3rem;
+        font-weight: bold;
+        
+        }
    
 }
-
-#gridMain1{
-    display: grid;
-    grid-template-columns: 20% 20% 40% 20%;
-    grid-auto-rows: auto auto;
-    grid-template-areas: "a1 a2 a3 a3"
-    "a4 a4 a5 a6";
-    row-gap: 20px;
-    margin-top: 40px;
-}
-.contenedorTexto{
-    grid-area: a3;
+.flexMain2{
+    display: flex;
     background-color: $colorMorado;
-    z-index:10 ;
-    
-  
-    h1{
-        margin-top: 15px;
-        color:#a8d3da ;
-        -webkit-text-stroke: 2px #132c33;
-        font-size: 40PX;
-        font-weight: bold;
-        margin-left: 100px;
-      
-     
+    margin-top: 1.875rem;
+    border-radius: 15px;
+    .contenedorTexto2{
+        padding: 1.25rem;
     }
-    p{
-       
-        margin-bottom: 5px;
-        text-align: justify;
-        margin-right: 20px;
-        
-        
+    .mapa1{
+        padding: 1.25rem;
+        iframe{
+            border-radius: 15px;
+        }
     }
-    .resaltar{
-        font-weight: bold;
-        margin-left: 80px;
-    }
-
-}
-.imagenP{
-    grid-area: a2;
-    margin: 0px;
-    border-radius: 15px 0px 0px 15px;
-    background-color: $colorMorado;
-    width: 100%;
-   img{
-       width:100%;
-       align-self: center;
-       padding: 25px;
-       
-   } 
-
-}
-.mapa1{
-    grid-area: a4;
-    margin: 0px;
-    background-color: $colorMorado;
-   iframe{
-       width:100%;
-       margin-top: 15px;
-       padding-right: 30px;
-       border-radius: 0px 15px 15px 0px;
-   }
-}
-.contenedorTexto2{
-    grid-area: a5;
-    background-color: $colorMorado;
-    border-radius: 0px 15px 15px 0px;
-    padding-right: 30px;
-    text-align: justify;
     h2{
-        margin-top: 20px;
-        margin-left: 30px;
+        
         color:#a8d3da ;
         -webkit-text-stroke: 2px #132c33;
-        font-size: 30PX;
+        font-size:3rem;
         font-weight: bold;
+        text-align: center;
     }
-    
 }
+
 #gripMain2{
     display:grid;
     grid-template-columns:25% 25% 25% 25%;
@@ -98,7 +76,7 @@ body{
     grid-template-areas:
     "area2 area3 area4 area5"
     "area6 area7 area8 area9";
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 .opcion1{
     grid-area: area2;
@@ -115,7 +93,7 @@ body{
   }
   .opcion3{
     @extend.opcion1;
-    width: 200px;
+    
     grid-area: area4;
    
   
@@ -123,7 +101,7 @@ body{
   
   .opcion4{
     @extend.opcion1;
-    width: 200px;
+    
     grid-area: area5;
     
   
@@ -137,7 +115,7 @@ body{
   .opcionDos{
     @extend.opcion1;
     grid-area: area7;
-    margin: 0px;
+    
   }
 
   .opcionTres{
@@ -149,7 +127,7 @@ body{
   .opcionCuatro{
     @extend.opcion1;
     grid-area: area9;
-    margin: 0px;
+    margin: 0rem;
   }
   #gripMain2 {
       img{
@@ -160,14 +138,12 @@ body{
   }
   .rectangulo1{
       position: absolute;
-      width: 100%;
+      width: 95%;
       height: 55px;
       background-color: $colorRosa;
-      margin-top: 120px;
+      margin-top: 7.5rem;
       z-index:-10;
-    
-      
-  }
+}
 
 
 #gridMain4{
@@ -177,9 +153,9 @@ body{
     grid-template-areas: "a1 a1 a1 a2"
     "a3 a3 a4 a4"
     "a5 a5 a6 a6";
-    column-gap: 15px;
-    row-gap: 15px;
-    margin-top: 40px;
+    column-gap: 0.9375rem;
+    row-gap: 0.9375rem;
+    margin-top: 2.5rem;
 }
 .titulo2{
     grid-area: a1;
@@ -190,7 +166,7 @@ body{
     h3{
         color:$colorMorado ;
         -webkit-text-stroke: 2px #132c33;
-        font-size: 30PX;
+        font-size: 3rem;
         font-weight: bold;
     }
     
@@ -212,7 +188,7 @@ body{
     grid-area: a4;
     
     p{
-        padding: 20px 30px 20px 80px;
+        padding: 1.25rem 1.875rem 1.25rem 5rem;
         text-align: justify;
     }
 }
@@ -222,9 +198,9 @@ body{
    
     p{
         
-        padding: 90px 30px 30px 30px;
+        padding: 5.625rem 1.875rem 1.875rem 1.875rem;
         text-align: justify;
-        margin-right: 60px;
+        margin-right: 3.75rem;
     }
 }
 .contenedorTips4{
@@ -232,26 +208,27 @@ body{
     grid-area: a6;
     
     p{
-        padding: 60px 30px 30px 80px;
+        padding: 3.75rem 1.875rem 1.875rem 5rem;
         text-align: justify;
-        margin-top: 30px;
+        margin-top: 1.875rem;
     }
 }
 .principal2{
 position: absolute;
-margin-top: 370px;
-margin-left: 525px;
+margin-top: 42rem;
+margin-left: 53.5rem;
 img{
-    width: 250px;
+    width: 15.625rem;
     z-index: 10;
 }
 }
 footer{
   
     width: 100%;
-    height: 50px;
+    height: auto;
     background-color: #131313;
-   margin-top: 40px;
+   margin-top: 2.5rem;
+   padding: 0.9375rem;
   
    
    }
@@ -261,7 +238,7 @@ footer{
      display: flex;
      justify-content: space-between;
      align-items: center;
-      height: 50px;
+      height: 3.125rem;
         }
         a:hover{
             transform: scale(1.1);  
@@ -272,7 +249,7 @@ footer{
    .contenedorFooter{
      display: flex;
      justify-content: center;
-     height: 50px;
+     height: 3.125rem;
    }
    @mixin botones ($font,$color,$border,$padding){
     font-size: $font;
@@ -282,7 +259,7 @@ footer{
 }
 #gripMain2{
     a{
-        @include botones(20px, $colorMorado, 15px, 8px);
+        @include botones(2rem, $colorMorado, 15px, 8px);
         text-decoration: none;
         color: $colorOscuro;
         font-weight: bold;
@@ -307,10 +284,12 @@ footer{
     .btn:hover{
         background-color: $colorMorado;
         }
+        .d-flex input{
+            font-size: 2rem;
+           
+        }
 }
 .contenedorI{
     width: 100%;
 }
-main{
-    box-sizing: border-box;
-}
+

@@ -1,167 +1,614 @@
-@media only screen and (max-width:600px) {
-    body{
-        
-        font-size: 70%;
-    }
-    #gridMain1{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-top: 10px;
-  .contenedorTexto{
-      border-radius: 0px;
-      padding-left: 20px;
-      h1{
-        
-          font-size: 20px;}
-      }
-      .imagenP{
-          width: 50%;
-          background-color: white;
-          order:-1;
-          margin-left: auto;
-          margin-right: auto;
-         
-          img{
-              width: 100%;
-              
-          }
-      }
-      .mapa1{
-          background-color: $colorAzul;
-          iframe{
-          margin-left: 15px;}
-      }
-      .contenedorTexto2{
-        padding-left: 20px;
-        border-radius: 0px;
-          h2{
-              font-size: 18px;
-              
-          }
-      }
-  
-}
-#gripMain2{
-    display:grid;
-    grid-template-columns:50% 50%;
-    grid-template-rows: 200px 60px 200px 60px;
-    grid-template-areas:
-    "area2 area3" "area6 area7"
-    "area4 area5" "area8 area9";
-    margin-top: 40px;
-    .opcion1{
-        img{
-            width: 150px;
+@media (max-width:768px){
+  /*index*/
+  body{
+    font-size: 1rem;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: visible;}  
+    .mapa1{
+        iframe{
+            width: 100%;
         }
     }
-    .opcion3{
-        margin-left: 50px;
+    .flexMain1{
+        flex-direction: column-reverse;
+        
+        h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .imagenP{
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
     }
-    .opcion4{
-        margin-left: 50px; 
+    .flexMain2{
+        flex-direction: column-reverse;
+        h2{
+            font-size: 2rem;
+        }
+        
     }
-    a{
-        font-size: 10px;
-    }
+    #gripMain2{
+        grid-template-columns:50% 50%;
+        grid-template-rows: 200px 60px 200px 60px;
+        grid-template-areas:
+        "area2 area3" 
+        "area6 area7"
+        "area4 area5" 
+        "area8 area9";
+        margin-top: 2.5rem;
 }
 #gridMain4{
-    display: grid;
-    grid-template-columns:auto auto;
-    grid-template-rows: 60px auto auto;
-    grid-template-areas: "a1 a1"
-    "a3 a4"
-    "a5 a6";
-    column-gap: 15px;
-    row-gap: 15px;
-    margin-top: 40px;
+        grid-template-columns:auto auto;
+        grid-template-rows: 60px auto auto;
+        grid-template-areas:"a1 a1"
+        "a3 a4"
+        "a5 a6";
+       
     .contenedorTips1{
-        padding: 0px;
+        padding: 0;
         margin: 0;
         p{
             padding: 0px;
             margin: 0;  
-            padding: 10px; 
+            padding: 0.625rem; 
         }
     }
     h3{
-        font-size: 18px;
+        font-size: 2.5rem;
     }
-    
 }
 .principal2{
-   
-    margin-top: 0px;
-    margin-left: 250px;
+        
+    margin-top: 0;
+    margin-left: 48rem;
     img{
-        width: 100px;
+        width: 90px;
         z-index: 10;
 }
-
 }
-footer{
-    .contenedorFooter{
-        margin-right: 100px;
+#gripMain2{
+.opcion1{
+    img{
+        width: 180px;
     }
 }
+
+a{
+    font-size: 1.5rem;
+}
+}
+.rectangulo1{
+    margin-top: 22.5rem;
+}
+/*adopcion*/
 #gridAdoptar1{
-    display: grid;
+    
     grid-template-columns: 50% 30%;
-    grid-template-rows: 300px 200px;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
     grid-template-areas:
     "area1 area2"
     "area3 area3";
     .imgAdopcion{
+        align-self: center;
+        img{
+            width: 150px;
+        }
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .textoAdopcion{
+        width: 100%;
+        margin-left: 1.25rem;
+        
+        p{
+           font-size:2rem;
+           
+        }
+    }
+}
+#gridAdoptar2{
+    margin-top:1rem;
+    grid-template-rows: auto auto auto auto auto;
+    h3{
+        font-size: 2rem;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+}
+#gridAdoptar3{
+    margin-top:1rem;
+    grid-template-rows: auto auto auto auto auto;
+    h3{
+        font-size: 2rem;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+}
+/*formularioAdopcion*/
+.formuAdo{
+    width: 60%;
+    input{
+        font-size: 1.5rem;
+    }
+    .form-select{
+        font-size: 1.5rem;
+    }
+    .btn{
+        font-size: 2rem;}
+}
+.tituloAdo{
+    
+    h2{
+    @include estiloTitulo($border,$colorMorado,2.5rem,$fontWeight);
+text-align: center;
+margin-bottom: 1.875rem;
+margin-top: 1.25rem;}
+}
+/*donaciones*/
+p{
+    font-size: 2rem;
+    }
+    .contenedorDonar{
+        p{
+            font-size: 2rem;
+        }
+    }
+    .botonDonar{
+        margin-top: 0;
+        a{
+            @include botones(1.5rem, $colorMorado, 2rem, 8px);
+            }
+    }
+    .contenedorDonar{
+        margin-top: 0px;
+    h3{
+           
+        @include estiloTitulo($border,$colorAzul,2.5rem,$fontWeight);
+    }
+    }
+    .contenedorAyuda{
+        h2{
+            @include estiloTitulo($border,$colorAzul,2.5rem,$fontWeight);
+        }
+    }
+    .contenedorGranito{
+        p{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
+    .contenedorPago{
+        margin-top: 0;
+       a{
+         @include botones(1.5rem, $colorMorado, 2rem, 8px);
+        }
+    }
+    .contenedorPago{
+       height: 2px;
+    }
+    #gridDonar{
+        grid-template-rows: 200px 100px  100px  50px  130px  100px;
+    }
+    /*transito*/
+#flexTransito{
+    flex-direction: column;
+    justify-content: center;
+}
+.contenedorConseguir{
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 0px;
+    p{font-size: 1.5rem;}
+}
+.formuTran{
+    .row{
+    width: 70%;}
+    input{
+        font-size: 1.5rem;
+    }
+    .btn{
+        font-size: 2rem;
+    }
+}
+/*contacto*/
+.formContac{
+    grid-area:a1;
+    background-color:$colorAzul;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    
+    input{
+        font-size: 1.5rem;
+    }
+    .form-select{
+        font-size: 1.5rem;}
+    label{
+        font-weight: bold;
+    }
+    legend{
+        font-weight: bold;
+        font-size: 1.5rem;
+    } 
+    .btn{
+       width: 100%;
+       font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 1.5rem;
+    }
+    }
+
+.gatoLado{
+    grid-area:a2;
+    margin-right: 100px;
+    margin-top: 50px;
+    
+ img{
+    grid-area:a2;
+    width: 130px;
+    margin-right: 200px;
+   
+ }
+}
+#gridContac{
+    display: grid;
+    grid-template-columns: 50% 15%;
+    grid-template-rows:auto;
+    justify-content: center;
+}
+/*inicio de sesion*/
+#gridSesion{
+    grid-template-columns: 50%;
+    
+    
+}
+#formInicioSesion{
+    height: 28rem;
+form label {
+    margin-left: 120px;}
+    font-size: 1.5rem;
+    form .btn{
+        margin-left: 8px;
+        font-size: 1.5rem;
+    }
+    form a{
+        margin-left: 55px;
+    }
+    
+}
+
+}
+@media (max-width: 576px){
+    /*index*/
+    body{
+        font-size: 1rem;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: visible;}
+    .rectangulo1{
+            width: 100%;
+            margin-top: 22.5rem;
+    }
+    .flexMain1{
+        flex-direction: column-reverse;
+        
+        h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .imagenP{
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+    }
+    .flexMain2{
+        flex-direction: column-reverse;
+        h2{
+            font-size: 2rem;
+        }
+        .mapa1{
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+    .flexMain2{
+        flex-direction: column-reverse;
+        h2{
+            font-size: 2rem;
+        }
+        .mapa1{
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+    #gripMain2{
+        grid-template-columns:50% 50%;
+        grid-template-rows: 200px 60px 200px 60px;
+        grid-template-areas:
+        "area2 area3" 
+        "area6 area7"
+        "area4 area5" 
+        "area8 area9";
+        margin-top: 2.5rem;
+        .opcion1{
+            img{
+                width: 150px;
+            }
+        }
+       
+        a{
+            font-size: 1.2rem;
+        }
+        
+         .titulo2{
+             h3{
+                 font-size:1rem;
+             }
+         } 
+    }
+    #gridMain4{
+        grid-template-columns:auto;
+        grid-template-rows: 60px auto auto auto auto;
+        grid-template-areas:"a1"
+        "a3"
+        "a4"
+        "a5"
+        "a6";
+
+        .contenedorTips1{
+            padding: 0;
+            margin: 0;
+            p{
+                padding: 0px;
+                margin: 0;  
+                padding: 0.625rem; 
+            }
+        }
+        h3{
+            font-size: 1.8rem;
+        }
+        
+    }
+    .principal2{
+        
+        margin-top: 0;
+        margin-left: 28rem;
+        img{
+            width: 90px;
+            z-index: 10;
+    }
+}
+.titulo2{
+    width: 80%;
+}
+.contenedorFooter{
+    align-items: center;
+    a{
+        margin-right: 0.625rem;
+    }
+    img{
+        width: 20px;
+    }
+}
+/*Adoptar*/
+#gridAdoptar1{
+    
+    grid-template-columns: 50% 30%;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
+    grid-template-areas:
+    "area1 area2"
+    "area3 area3";
+    .imgAdopcion{
+        align-self: center;
         img{
             width: 100px;
         }
     }
     h2{
-        font-size: 15px;
+        font-size: 1.5rem;
     }
     .textoAdopcion{
         width: 100%;
+        margin-left: 1.25rem;
+        
         p{
-           font-size:18px;
+           font-size:1.6rem;
+           
         }
     }
 }
 #gridAdoptar2{
-    margin-top:60px;
+    margin-top:1rem;
     grid-template-rows: auto auto auto auto auto;
     h3{
-        font-size: 15px;
+        font-size: 1.5rem;
     }
     a{
-        font-size: 10px;
+        font-size: 1rem;
     }
 }
 #gridAdoptar3{
-    margin-top:60px;
+    margin-top:1rem;
     grid-template-rows: auto auto auto auto auto;
     h3{
-        font-size: 15px;
+        font-size: 1.5rem;
     }
     a{
-        font-size: 10px;
+        font-size: 1rem;
+    }
+}
+/*formulario adopción*/
+.formuAdo{
+    width: 60%;
+    input{
+        font-size: 1rem;
+    }
+    .form-select{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 1rem;}
+}
+.tituloAdo{
+    
+    h2{
+    @include estiloTitulo($border,$colorMorado,2rem,$fontWeight);
+text-align: center;
+margin-bottom: 1.875rem;
+margin-top: 1.25rem;}
+}
+/*donaciones*/
+p{
+font-size: 1rem;
+}
+.contenedorDonar{
+    p{
+        font-size: 1rem;
+    }
+}
+.botonDonar{
+    margin-top: 0;
+    a{
+        @include botones(1rem, $colorMorado, 1.5rem, 8px);
+        }
+}
+.contenedorDonar{
+    margin-top: 0px;
+h3{
+       
+    @include estiloTitulo($border,$colorAzul,2rem,$fontWeight);
+}
+}
+.contenedorAyuda{
+    h2{
+        @include estiloTitulo($border,$colorAzul,2rem,$fontWeight);
+    }
+}
+.contenedorGranito{
+    p{
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+.contenedorPago{
+    margin-top: 0;
+   a{
+     @include botones(1rem, $colorMorado, 1.5rem, 8px);
+    }
+}
+.contenedorPago{
+   height: 2px;
+}
+#gridDonar{
+    grid-template-rows: 200px 100px  100px  50px  100px  100px;
+}
+/*transito*/
+#flexTransito{
+    flex-direction: column;
+    justify-content: center;
+}
+.contenedorConseguir{
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+.formuTran{
+    .row{
+    width: 70%;}
+    input{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+}
+/*contacto*/
+.formContac{
+    grid-area:a1;
+    background-color:$colorAzul;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    
+    input{
+        font-size: 1rem;
+    }
+    .form-select{
+        font-size: 1rem;}
+    label{
+        font-weight: bold;
+    }
+    legend{
+        font-weight: bold;
+        font-size: 1.2rem;
+    } 
+    .btn{
+       width: 100%;
+       font-size: 1rem;
+    }
+    .form-control{
+        font-size: 1rem;
+    }
     }
 
+.gatoLado{
+    grid-area:a2;
+    margin-right: 100px;
+    margin-top: 50px;
+    
+ img{
+    grid-area:a2;
+    width: 100px;
+    margin-right: 200px;
+   
+ }
 }
+#gridContac{
+    display: grid;
+    grid-template-columns: 50% 15%;
+    grid-template-rows:450px;
+    justify-content: center;
+}
+/*inicio de sesion*/
 #gridSesion{
-    #formInicioSesion form label {
-        margin-left: 0px;
-        font-weight: bold;
-    }
-    #formInicioSesion form .btn {
-        margin-left: 0px;
-    }
-    #formInicioSesion form a {
-        margin-left: 0px;
-        margin-bottom: 20px;
-        font-weight: bold;
-    }
+    grid-template-columns: 60%;
+    
 }
-.formContac .btn {
-    margin-left: 0px;
+#formInicioSesion{
+    height: 28rem;
+form label {
+    margin-left: 95px;}
+    form .btn{
+        margin-left: 5px;
+    }
+    form a{
+        margin-left: 45px;
+    }
+    
+}
+/*tuCuenta*/
+.formu .row{
+    display: flex;
+    flex-direction: column;
+    
+}
+.formu .col{
+margin-left: 70px;
+}
+
+.formu .col.right {
+    margin-left: 70px;
 }
 }

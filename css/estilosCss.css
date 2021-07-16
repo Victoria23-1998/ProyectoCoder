@@ -1,80 +1,64 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0; }
+  box-sizing: border-box; }
+
+html {
+  /* etiqueta raíz */
+  font-size: 62.5%; }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px; }
-
-#gridMain1 {
-  display: grid;
-  grid-template-columns: 20% 20% 40% 20%;
-  grid-auto-rows: auto auto;
-  grid-template-areas: "a1 a2 a3 a3" "a4 a4 a5 a6";
-  row-gap: 20px;
-  margin-top: 40px; }
-
-.contenedorTexto {
-  grid-area: a3;
-  background-color: #B590CA;
-  z-index: 10; }
-  .contenedorTexto h1 {
-    margin-top: 15px;
-    color: #a8d3da;
-    -webkit-text-stroke: 2px #132c33;
-    font-size: 40PX;
-    font-weight: bold;
-    margin-left: 100px; }
-  .contenedorTexto p {
-    margin-bottom: 5px;
-    text-align: justify;
-    margin-right: 20px; }
-  .contenedorTexto .resaltar {
-    font-weight: bold;
-    margin-left: 80px; }
-
-.imagenP {
-  grid-area: a2;
-  margin: 0px;
-  border-radius: 15px 0px 0px 15px;
-  background-color: #B590CA;
-  width: 100%; }
-  .imagenP img {
-    width: 100%;
-    align-self: center;
-    padding: 25px; }
-
-.mapa1 {
-  grid-area: a4;
-  margin: 0px;
-  background-color: #B590CA; }
-  .mapa1 iframe {
-    width: 100%;
-    margin-top: 15px;
-    padding-right: 30px;
-    border-radius: 0px 15px 15px 0px; }
-
-.contenedorTexto2 {
-  grid-area: a5;
-  background-color: #B590CA;
-  border-radius: 0px 15px 15px 0px;
+  font-size: 2rem;
+  padding-left: 30px;
   padding-right: 30px;
-  text-align: justify; }
-  .contenedorTexto2 h2 {
-    margin-top: 20px;
-    margin-left: 30px;
+  overflow-x: auto; }
+  body p {
+    text-align: justify; }
+
+.flexMain1 {
+  display: flex;
+  background-color: #B590CA;
+  margin-top: 1.875rem;
+  border-radius: 15px; }
+  .flexMain1 .contenedorTexto {
+    padding: 1.25rem; }
+  .flexMain1 .imagenP {
+    width: 80%;
+    padding: 1.25rem; }
+    .flexMain1 .imagenP img {
+      width: 100%; }
+  .flexMain1 h1 {
     color: #a8d3da;
     -webkit-text-stroke: 2px #132c33;
-    font-size: 30PX;
+    font-size: 3rem;
     font-weight: bold; }
+
+.flexMain2 {
+  display: flex;
+  background-color: #B590CA;
+  margin-top: 1.875rem;
+  border-radius: 15px; }
+  .flexMain2 .contenedorTexto2 {
+    padding: 1.25rem; }
+  .flexMain2 .mapa1 {
+    padding: 1.25rem; }
+    .flexMain2 .mapa1 iframe {
+      border-radius: 15px; }
+  .flexMain2 h2 {
+    color: #a8d3da;
+    -webkit-text-stroke: 2px #132c33;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center; }
 
 #gripMain2 {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 200px 60px;
   grid-template-areas: "area2 area3 area4 area5" "area6 area7 area8 area9";
-  margin-top: 40px; }
+  margin-top: 2.5rem; }
 
 .opcion1, .opcion2, .opcion3, .opcion4, .opcion, .opcionDos, .opcionTres, .opcionCuatro {
   grid-area: area2;
@@ -85,26 +69,23 @@ body {
   grid-area: area3; }
 
 .opcion3 {
-  width: 200px;
   grid-area: area4; }
 
 .opcion4 {
-  width: 200px;
   grid-area: area5; }
 
 .opcion {
   grid-area: area6; }
 
 .opcionDos {
-  grid-area: area7;
-  margin: 0px; }
+  grid-area: area7; }
 
 .opcionTres {
   grid-area: area8; }
 
 .opcionCuatro {
   grid-area: area9;
-  margin: 0px; }
+  margin: 0rem; }
 
 #gripMain2 img {
   width: auto;
@@ -112,10 +93,10 @@ body {
 
 .rectangulo1 {
   position: absolute;
-  width: 100%;
+  width: 95%;
   height: 55px;
   background-color: #f5cab3;
-  margin-top: 120px;
+  margin-top: 7.5rem;
   z-index: -10; }
 
 #gridMain4 {
@@ -123,9 +104,9 @@ body {
   grid-template-columns: 26% 20.5% 30% 20%;
   grid-template-rows: 60px auto auto;
   grid-template-areas: "a1 a1 a1 a2" "a3 a3 a4 a4" "a5 a5 a6 a6";
-  column-gap: 15px;
-  row-gap: 15px;
-  margin-top: 40px; }
+  column-gap: 0.9375rem;
+  row-gap: 0.9375rem;
+  margin-top: 2.5rem; }
 
 .titulo2 {
   grid-area: a1;
@@ -136,7 +117,7 @@ body {
   .titulo2 h3 {
     color: #B590CA;
     -webkit-text-stroke: 2px #132c33;
-    font-size: 30PX;
+    font-size: 3rem;
     font-weight: bold; }
 
 .contenedorTips1, .contenedorTips2, .contenedorTips3, .contenedorTips4 {
@@ -150,43 +131,44 @@ body {
 .contenedorTips2 {
   grid-area: a4; }
   .contenedorTips2 p {
-    padding: 20px 30px 20px 80px;
+    padding: 1.25rem 1.875rem 1.25rem 5rem;
     text-align: justify; }
 
 .contenedorTips3 {
   grid-area: a5; }
   .contenedorTips3 p {
-    padding: 90px 30px 30px 30px;
+    padding: 5.625rem 1.875rem 1.875rem 1.875rem;
     text-align: justify;
-    margin-right: 60px; }
+    margin-right: 3.75rem; }
 
 .contenedorTips4 {
   grid-area: a6; }
   .contenedorTips4 p {
-    padding: 60px 30px 30px 80px;
+    padding: 3.75rem 1.875rem 1.875rem 5rem;
     text-align: justify;
-    margin-top: 30px; }
+    margin-top: 1.875rem; }
 
 .principal2 {
   position: absolute;
-  margin-top: 370px;
-  margin-left: 525px; }
+  margin-top: 42rem;
+  margin-left: 53.5rem; }
   .principal2 img {
-    width: 250px;
+    width: 15.625rem;
     z-index: 10; }
 
 footer {
   width: 100%;
-  height: 50px;
+  height: auto;
   background-color: #131313;
-  margin-top: 40px; }
+  margin-top: 2.5rem;
+  padding: 0.9375rem; }
 
 .contenedorFooter ul {
   width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px; }
+  height: 3.125rem; }
 
 .contenedorFooter a:hover {
   transform: scale(1.1); }
@@ -194,10 +176,10 @@ footer {
 .contenedorFooter {
   display: flex;
   justify-content: center;
-  height: 50px; }
+  height: 3.125rem; }
 
 #gripMain2 a {
-  font-size: 20px;
+  font-size: 2rem;
   background-color: #B590CA;
   border-radius: 15px;
   padding: 8px;
@@ -220,12 +202,14 @@ footer {
   border-bottom: 1px solid #afadad; }
   .navbar .btn:hover {
     background-color: #B590CA; }
+  .navbar .d-flex input {
+    font-size: 2rem; }
 
 .contenedorI {
   width: 100%; }
 
-main {
-  box-sizing: border-box; }
+body {
+  font-size: 2rem; }
 
 #gridAdoptar1 {
   display: grid;
@@ -235,16 +219,16 @@ main {
 
 .textoAdopcion {
   grid-area: area3;
-  margin-top: 70px; }
+  margin-top: 4.375rem; }
   .textoAdopcion p {
     text-align: center;
     -webkit-text-stroke: 2px black;
     color: #a8d3da;
-    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: bold; }
 
 .contenedorAdopcion {
-  margin-top: 40px;
+  margin-top: 2.5rem;
   background-image: url(../img/FONDO.jpg);
   width: 100%;
   border-radius: 30px;
@@ -262,17 +246,17 @@ main {
     list-style: none; }
     .contenedorAdopcion ul li {
       font-weight: bold;
-      line-height: 50px; }
+      line-height: 3.125rem; }
 
 .imgAdopcion {
   justify-self: center;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   grid-area: area2; }
 
 #gridAdoptar2 {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50px auto 50px auto 50px;
+  grid-template-rows: 40px auto 50px auto 50px;
   grid-template-areas: "a1 a1 a1 a1" "a2 a3 a4 a5" "a8 a9 a10 a11" "a14 a15 a16 a17" "a20 a21 a22 a23";
   column-gap: 10px;
   row-gap: 10px;
@@ -284,7 +268,8 @@ main {
     width: 100%;
     height: 30px;
     font-weight: bold;
-    border-radius: 0px 0px 25px 25px; }
+    border-radius: 0px 0px 25px 25px;
+    font-size: 2rem; }
   #gridAdoptar2 img {
     width: 100%;
     vertical-align: top;
@@ -292,7 +277,7 @@ main {
   #gridAdoptar2 a {
     text-decoration: none;
     color: #132c33;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold; }
   #gridAdoptar2 a:hover {
     color: #B590CA; }
@@ -301,8 +286,10 @@ main {
   grid-area: a1;
   background-color: #B590CA;
   width: 50%;
-  border-radius: 0px 15px 15px 0px; }
+  border-radius: 0px 15px 15px 0px;
+  padding-left: 0.9375rem; }
   .tituloPerro h3 {
+    font-size: 3rem;
     font-weight: bold; }
 
 .imagen1 {
@@ -335,8 +322,8 @@ main {
   align-self: center;
   background-color: #A8D3DA;
   border-radius: 15px;
-  padding: 5px;
-  margin-bottom: 8px; }
+  padding: 0.3125rem;
+  margin-bottom: 0.5rem; }
 
 .info2 {
   grid-area: a9; }
@@ -362,20 +349,21 @@ main {
 #gridAdoptar3 {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50px auto 50px auto 50px;
+  grid-template-rows: 40px auto 50px auto 50px;
   grid-template-areas: "a1 a1 a1 a1" "a2 a3 a4 a5" "a8 a9 a10 a11" "a14 a15 a16 a17" "a20 a21 a22 a23";
-  column-gap: 10px;
-  row-gap: 10px;
-  margin-top: 50px;
-  margin-right: 30px;
-  margin-bottom: 50px; }
+  column-gap: 0.625rem;
+  row-gap: 0.625rem;
+  margin-top: 3.125rem;
+  margin-right: 1.875rem;
+  margin-bottom: 3.125rem; }
   #gridAdoptar3 h4 {
     text-align: center;
     background-color: #b590ca;
     width: 100%;
     height: 30px;
     border-radius: 0px 0px 25px 25px;
-    font-weight: bolder; }
+    font-weight: bolder;
+    font-size: 2rem; }
   #gridAdoptar3 img {
     width: 100%;
     vertical-align: top;
@@ -383,7 +371,7 @@ main {
   #gridAdoptar3 a {
     text-decoration: none;
     color: #132c33;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold; }
   #gridAdoptar3 a:hover {
     color: #B590CA; }
@@ -392,10 +380,11 @@ main {
   grid-area: a1;
   background-color: #B590CA;
   width: 50%;
+  padding-left: 0.3125rem;
   border-radius: 0px 15px 15px 0px; }
   .tituloGato h3 {
-    padding-top: 5px;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 3rem; }
 
 .imagen9 {
   grid-area: a2; }
@@ -427,8 +416,8 @@ main {
   align-self: center;
   background-color: #A8D3DA;
   border-radius: 15px;
-  padding: 5px;
-  margin-bottom: 8px; }
+  padding: 0.3125rem;
+  margin-bottom: 0.5rem; }
 
 .info10 {
   grid-area: a9; }
@@ -451,12 +440,15 @@ main {
 .info16 {
   grid-area: a23; }
 
+body {
+  font-size: 2rem; }
+
 #gridDonar {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 200px 100px  100px  100px  100px  100px;
   grid-template-areas: "area1" "area2" "area3" "area4" "area5" "area6";
-  margin-top: 50px; }
+  margin-top: 3.125rem; }
 
 .imgDon {
   grid-area: area1;
@@ -467,36 +459,36 @@ main {
 .contenedorGranito {
   grid-area: area2;
   justify-self: center;
-  margin-top: 15px; }
+  margin-top: 0.9375rem; }
   .contenedorGranito p {
     color: #a8d3da;
     -webkit-text-stroke: 2px #132c33;
-    font-size: 30PX;
+    font-size: 3rem;
     font-weight: bold; }
 
 .contenedorAyuda, .contenedorDonar, .botonDonar {
   grid-area: area3;
   justify-self: center;
   text-align: center;
-  margin-top: 2px; }
+  margin-top: 0.125rem; }
   .contenedorAyuda h2, .contenedorDonar h2, .botonDonar h2 {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     background-color: #f5cab3;
     border-radius: 15px;
     -webkit-text-stroke: 2px black;
     color: #A8D3DA;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold; }
 
 .contenedorPago {
   grid-area: area4;
   justify-self: center;
-  margin-top: 45px; }
+  margin-top: 2.8125rem; }
   .contenedorPago a {
     text-decoration: none;
     font-size: 20px;
     background-color: #B590CA;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     padding: 8px;
     text-decoration: none;
     color: #132c33;
@@ -505,27 +497,28 @@ main {
     color: azure; }
 
 .contenedorDonar, .botonDonar {
-  grid-area: area5;
-  width: 48%; }
+  grid-area: area5; }
   .contenedorDonar p, .botonDonar p {
-    font-size: 30px;
-    margin-top: 15px; }
+    font-size: 2.5rem;
+    margin-top: 0.9375rem;
+    text-align: center;
+    font-weight: bold; }
   .contenedorDonar h3, .botonDonar h3 {
     background-color: #f5cab3;
     border-radius: 15px;
     -webkit-text-stroke: 2px black;
     color: #A8D3DA;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold; }
 
 .botonDonar {
   grid-area: area6;
-  margin-top: 60px; }
+  margin-top: 3.75rem; }
   .botonDonar a {
     text-decoration: none;
     font-size: 20px;
     background-color: #B590CA;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     padding: 8px;
     text-decoration: none;
     color: #132c33;
@@ -550,24 +543,28 @@ main {
   background-color: #A8D3DA;
   width: 100%;
   border-radius: 15px;
-  height: 330px;
+  height: auto;
   grid-area: a2; }
   #formInicioSesion form input {
     width: 80%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    font-size: 2rem; }
   #formInicioSesion form label {
     margin-left: 170px;
     font-weight: bold; }
   #formInicioSesion form #emailHelp {
-    margin-left: 30px; }
+    margin-left: 3rem; }
   #formInicioSesion form .form-label1 {
-    margin-top: 20px; }
+    margin-top: 2rem; }
   #formInicioSesion form .btn {
-    margin-left: 80px; }
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    width: 92%; }
   #formInicioSesion form a {
-    margin-left: 80px;
-    margin-bottom: 20px;
+    margin-left: 8rem;
+    margin-bottom: 2rem;
     font-weight: bold; }
 
 .formu .row {
@@ -672,21 +669,31 @@ main {
   left: 12px;
   height: 8px; }
 
+body {
+  font-size: 2rem; }
+
 .formuAdo {
   background-color: #A8D3DA;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
-  padding: 30px; }
+  padding: 1.875rem; }
+  .formuAdo input {
+    font-size: 2rem; }
+  .formuAdo .form-select {
+    font-size: 2rem; }
+  .formuAdo .btn {
+    font-size: 2rem;
+    width: 100%; }
 
 .tituloAdo h2 {
   -webkit-text-stroke: 2px black;
   color: #B590CA;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 1.875rem; }
 
 #flexTransito {
   display: flex;
@@ -697,26 +704,38 @@ main {
   background-color: #a8d3da;
   height: auto;
   align-self: center;
-  padding: 30px;
+  padding: 1.875rem;
   width: 30%;
   border-radius: 30px;
   font-weight: bold;
-  margin-left: 120px; }
+  margin-left: 7.5rem; }
   .contenedorConseguir p {
     text-align: center; }
 
 .contenedorTransito {
-  margin-right: 50px; }
+  margin-right: 3.125rem; }
 
 .formuTran .row {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   border: #b7c6ca 1px solid;
-  padding: 5px;
+  padding: 0.3125rem;
   border-radius: 15px;
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem; }
+
+.formuTran input {
+  font-size: 2rem; }
+
+.formuTran .btn {
+  font-size: 2rem;
+  width: 100%;
+  margin-bottom: 1rem; }
+
+.formuTran h2 {
+  text-align: center;
+  font-weight: bold; }
 
 #gridContac {
   display: grid;
@@ -728,15 +747,23 @@ main {
 .formContac {
   grid-area: a1;
   background-color: #A8D3DA;
-  border-radius: 15px;
-  margin-top: 30px;
-  padding: 20px; }
+  border-radius: 1.5rem;
+  margin-top: 3rem;
+  padding: 2rem; }
+  .formContac input {
+    font-size: 2rem; }
+  .formContac .form-select {
+    font-size: 2rem; }
   .formContac label {
     font-weight: bold; }
   .formContac legend {
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 2.5rem; }
   .formContac .btn {
-    margin-left: 150px; }
+    width: 100%;
+    font-size: 2rem; }
+  .formContac .form-control {
+    font-size: 2rem; }
 
 .gatoLado {
   grid-area: a2;
@@ -747,110 +774,427 @@ main {
     width: 200px;
     margin-right: 200px; }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
+  /*index*/
   body {
-    font-size: 70%; }
-  #gridMain1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 10px; }
-    #gridMain1 .contenedorTexto {
-      border-radius: 0px;
-      padding-left: 20px; }
-      #gridMain1 .contenedorTexto h1 {
-        font-size: 20px; }
-    #gridMain1 .imagenP {
-      width: 50%;
-      background-color: white;
-      order: -1;
+    font-size: 1rem;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: visible; }
+  .mapa1 iframe {
+    width: 100%; }
+  .flexMain1 {
+    flex-direction: column-reverse; }
+    .flexMain1 h1 {
+      font-size: 2rem;
+      text-align: center; }
+    .flexMain1 .imagenP {
       margin-left: auto;
-      margin-right: auto; }
-      #gridMain1 .imagenP img {
-        width: 100%; }
-    #gridMain1 .mapa1 {
-      background-color: #A8D3DA; }
-      #gridMain1 .mapa1 iframe {
-        margin-left: 15px; }
-    #gridMain1 .contenedorTexto2 {
-      padding-left: 20px;
-      border-radius: 0px; }
-      #gridMain1 .contenedorTexto2 h2 {
-        font-size: 18px; }
+      margin-right: auto;
+      width: 40%; }
+  .flexMain2 {
+    flex-direction: column-reverse; }
+    .flexMain2 h2 {
+      font-size: 2rem; }
   #gripMain2 {
-    display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 200px 60px 200px 60px;
-    grid-template-areas: "area2 area3" "area6 area7" "area4 area5" "area8 area9";
-    margin-top: 40px; }
-    #gripMain2 .opcion1 img, #gripMain2 .opcion2 img, #gripMain2 .opcion3 img, #gripMain2 .opcion4 img, #gripMain2 .opcion img, #gripMain2 .opcionDos img, #gripMain2 .opcionTres img, #gripMain2 .opcionCuatro img {
-      width: 150px; }
-    #gripMain2 .opcion3 {
-      margin-left: 50px; }
-    #gripMain2 .opcion4 {
-      margin-left: 50px; }
-    #gripMain2 a {
-      font-size: 10px; }
+    grid-template-areas: "area2 area3"  "area6 area7" "area4 area5"  "area8 area9";
+    margin-top: 2.5rem; }
   #gridMain4 {
-    display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 60px auto auto;
-    grid-template-areas: "a1 a1" "a3 a4" "a5 a6";
-    column-gap: 15px;
-    row-gap: 15px;
-    margin-top: 40px; }
+    grid-template-areas: "a1 a1" "a3 a4" "a5 a6"; }
     #gridMain4 .contenedorTips1, #gridMain4 .contenedorTips2, #gridMain4 .contenedorTips3, #gridMain4 .contenedorTips4 {
-      padding: 0px;
+      padding: 0;
       margin: 0; }
       #gridMain4 .contenedorTips1 p, #gridMain4 .contenedorTips2 p, #gridMain4 .contenedorTips3 p, #gridMain4 .contenedorTips4 p {
         padding: 0px;
         margin: 0;
-        padding: 10px; }
+        padding: 0.625rem; }
     #gridMain4 h3 {
-      font-size: 18px; }
+      font-size: 2.5rem; }
   .principal2 {
-    margin-top: 0px;
-    margin-left: 250px; }
+    margin-top: 0;
+    margin-left: 48rem; }
     .principal2 img {
-      width: 100px;
+      width: 90px;
       z-index: 10; }
-  footer .contenedorFooter {
-    margin-right: 100px; }
+  #gripMain2 .opcion1 img, #gripMain2 .opcion2 img, #gripMain2 .opcion3 img, #gripMain2 .opcion4 img, #gripMain2 .opcion img, #gripMain2 .opcionDos img, #gripMain2 .opcionTres img, #gripMain2 .opcionCuatro img {
+    width: 180px; }
+  #gripMain2 a {
+    font-size: 1.5rem; }
+  .rectangulo1 {
+    margin-top: 22.5rem; }
+  /*adopcion*/
   #gridAdoptar1 {
-    display: grid;
     grid-template-columns: 50% 30%;
-    grid-template-rows: 300px 200px;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
     grid-template-areas: "area1 area2" "area3 area3"; }
-    #gridAdoptar1 .imgAdopcion img {
-      width: 100px; }
+    #gridAdoptar1 .imgAdopcion {
+      align-self: center; }
+      #gridAdoptar1 .imgAdopcion img {
+        width: 150px; }
     #gridAdoptar1 h2 {
-      font-size: 15px; }
+      font-size: 2rem; }
     #gridAdoptar1 .textoAdopcion {
-      width: 100%; }
+      width: 100%;
+      margin-left: 1.25rem; }
       #gridAdoptar1 .textoAdopcion p {
-        font-size: 18px; }
+        font-size: 2rem; }
   #gridAdoptar2 {
-    margin-top: 60px;
+    margin-top: 1rem;
     grid-template-rows: auto auto auto auto auto; }
     #gridAdoptar2 h3 {
-      font-size: 15px; }
+      font-size: 2rem; }
     #gridAdoptar2 a {
-      font-size: 10px; }
+      font-size: 1.5rem; }
   #gridAdoptar3 {
-    margin-top: 60px;
+    margin-top: 1rem;
     grid-template-rows: auto auto auto auto auto; }
     #gridAdoptar3 h3 {
-      font-size: 15px; }
+      font-size: 2rem; }
     #gridAdoptar3 a {
-      font-size: 10px; }
-  #gridSesion #formInicioSesion form label {
-    margin-left: 0px;
+      font-size: 1.5rem; }
+  /*formularioAdopcion*/
+  .formuAdo {
+    width: 60%; }
+    .formuAdo input {
+      font-size: 1.5rem; }
+    .formuAdo .form-select {
+      font-size: 1.5rem; }
+    .formuAdo .btn {
+      font-size: 2rem; }
+  .tituloAdo h2 {
+    -webkit-text-stroke: 2px black;
+    color: #B590CA;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.875rem;
+    margin-top: 1.25rem; }
+  /*donaciones*/
+  p {
+    font-size: 2rem; }
+  .contenedorDonar p, .botonDonar p {
+    font-size: 2rem; }
+  .botonDonar {
+    margin-top: 0; }
+    .botonDonar a {
+      font-size: 1.5rem;
+      background-color: #B590CA;
+      border-radius: 2rem;
+      padding: 8px; }
+  .contenedorDonar, .botonDonar {
+    margin-top: 0px; }
+    .contenedorDonar h3, .botonDonar h3 {
+      -webkit-text-stroke: 2px black;
+      color: #A8D3DA;
+      font-size: 2.5rem;
+      font-weight: bold; }
+  .contenedorAyuda h2, .contenedorDonar h2, .botonDonar h2 {
+    -webkit-text-stroke: 2px black;
+    color: #A8D3DA;
+    font-size: 2.5rem;
     font-weight: bold; }
-  #gridSesion #formInicioSesion form .btn {
+  .contenedorGranito p {
+    font-size: 2.5rem;
+    text-align: center; }
+  .contenedorPago {
+    margin-top: 0; }
+    .contenedorPago a {
+      font-size: 1.5rem;
+      background-color: #B590CA;
+      border-radius: 2rem;
+      padding: 8px; }
+  .contenedorPago {
+    height: 2px; }
+  #gridDonar {
+    grid-template-rows: 200px 100px  100px  50px  130px  100px; }
+  /*transito*/
+  #flexTransito {
+    flex-direction: column;
+    justify-content: center; }
+  .contenedorConseguir {
+    width: 70%;
+    margin-top: 20px;
     margin-left: 0px; }
-  #gridSesion #formInicioSesion form a {
-    margin-left: 0px;
-    margin-bottom: 20px;
+    .contenedorConseguir p {
+      font-size: 1.5rem; }
+  .formuTran .row {
+    width: 70%; }
+  .formuTran input {
+    font-size: 1.5rem; }
+  .formuTran .btn {
+    font-size: 2rem; }
+  /*contacto*/
+  .formContac {
+    grid-area: a1;
+    background-color: #A8D3DA;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    padding: 2rem; }
+    .formContac input {
+      font-size: 1.5rem; }
+    .formContac .form-select {
+      font-size: 1.5rem; }
+    .formContac label {
+      font-weight: bold; }
+    .formContac legend {
+      font-weight: bold;
+      font-size: 1.5rem; }
+    .formContac .btn {
+      width: 100%;
+      font-size: 1.5rem; }
+    .formContac .form-control {
+      font-size: 1.5rem; }
+  .gatoLado {
+    grid-area: a2;
+    margin-right: 100px;
+    margin-top: 50px; }
+    .gatoLado img {
+      grid-area: a2;
+      width: 130px;
+      margin-right: 200px; }
+  #gridContac {
+    display: grid;
+    grid-template-columns: 50% 15%;
+    grid-template-rows: auto;
+    justify-content: center; }
+  /*inicio de sesion*/
+  #gridSesion {
+    grid-template-columns: 50%; }
+  #formInicioSesion {
+    height: 28rem;
+    font-size: 1.5rem; }
+    #formInicioSesion form label {
+      margin-left: 120px; }
+    #formInicioSesion form .btn {
+      margin-left: 8px;
+      font-size: 1.5rem; }
+    #formInicioSesion form a {
+      margin-left: 55px; } }
+
+@media (max-width: 576px) {
+  /*index*/
+  body {
+    font-size: 1rem;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: visible; }
+  .rectangulo1 {
+    width: 100%;
+    margin-top: 22.5rem; }
+  .flexMain1 {
+    flex-direction: column-reverse; }
+    .flexMain1 h1 {
+      font-size: 2rem;
+      text-align: center; }
+    .flexMain1 .imagenP {
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%; }
+  .flexMain2 {
+    flex-direction: column-reverse; }
+    .flexMain2 h2 {
+      font-size: 2rem; }
+    .flexMain2 .mapa1 iframe {
+      width: 100%; }
+  .flexMain2 {
+    flex-direction: column-reverse; }
+    .flexMain2 h2 {
+      font-size: 2rem; }
+    .flexMain2 .mapa1 iframe {
+      width: 100%; }
+  #gripMain2 {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px 60px 200px 60px;
+    grid-template-areas: "area2 area3"  "area6 area7" "area4 area5"  "area8 area9";
+    margin-top: 2.5rem; }
+    #gripMain2 .opcion1 img, #gripMain2 .opcion2 img, #gripMain2 .opcion3 img, #gripMain2 .opcion4 img, #gripMain2 .opcion img, #gripMain2 .opcionDos img, #gripMain2 .opcionTres img, #gripMain2 .opcionCuatro img {
+      width: 150px; }
+    #gripMain2 a {
+      font-size: 1.2rem; }
+    #gripMain2 .titulo2 h3 {
+      font-size: 1rem; }
+  #gridMain4 {
+    grid-template-columns: auto;
+    grid-template-rows: 60px auto auto auto auto;
+    grid-template-areas: "a1" "a3" "a4" "a5" "a6"; }
+    #gridMain4 .contenedorTips1, #gridMain4 .contenedorTips2, #gridMain4 .contenedorTips3, #gridMain4 .contenedorTips4 {
+      padding: 0;
+      margin: 0; }
+      #gridMain4 .contenedorTips1 p, #gridMain4 .contenedorTips2 p, #gridMain4 .contenedorTips3 p, #gridMain4 .contenedorTips4 p {
+        padding: 0px;
+        margin: 0;
+        padding: 0.625rem; }
+    #gridMain4 h3 {
+      font-size: 1.8rem; }
+  .principal2 {
+    margin-top: 0;
+    margin-left: 28rem; }
+    .principal2 img {
+      width: 90px;
+      z-index: 10; }
+  .titulo2 {
+    width: 80%; }
+  .contenedorFooter {
+    align-items: center; }
+    .contenedorFooter a {
+      margin-right: 0.625rem; }
+    .contenedorFooter img {
+      width: 20px; }
+  /*Adoptar*/
+  #gridAdoptar1 {
+    grid-template-columns: 50% 30%;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
+    grid-template-areas: "area1 area2" "area3 area3"; }
+    #gridAdoptar1 .imgAdopcion {
+      align-self: center; }
+      #gridAdoptar1 .imgAdopcion img {
+        width: 100px; }
+    #gridAdoptar1 h2 {
+      font-size: 1.5rem; }
+    #gridAdoptar1 .textoAdopcion {
+      width: 100%;
+      margin-left: 1.25rem; }
+      #gridAdoptar1 .textoAdopcion p {
+        font-size: 1.6rem; }
+  #gridAdoptar2 {
+    margin-top: 1rem;
+    grid-template-rows: auto auto auto auto auto; }
+    #gridAdoptar2 h3 {
+      font-size: 1.5rem; }
+    #gridAdoptar2 a {
+      font-size: 1rem; }
+  #gridAdoptar3 {
+    margin-top: 1rem;
+    grid-template-rows: auto auto auto auto auto; }
+    #gridAdoptar3 h3 {
+      font-size: 1.5rem; }
+    #gridAdoptar3 a {
+      font-size: 1rem; }
+  /*formulario adopción*/
+  .formuAdo {
+    width: 60%; }
+    .formuAdo input {
+      font-size: 1rem; }
+    .formuAdo .form-select {
+      font-size: 1rem; }
+    .formuAdo .btn {
+      font-size: 1rem; }
+  .tituloAdo h2 {
+    -webkit-text-stroke: 2px black;
+    color: #B590CA;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.875rem;
+    margin-top: 1.25rem; }
+  /*donaciones*/
+  p {
+    font-size: 1rem; }
+  .contenedorDonar p, .botonDonar p {
+    font-size: 1rem; }
+  .botonDonar {
+    margin-top: 0; }
+    .botonDonar a {
+      font-size: 1rem;
+      background-color: #B590CA;
+      border-radius: 1.5rem;
+      padding: 8px; }
+  .contenedorDonar, .botonDonar {
+    margin-top: 0px; }
+    .contenedorDonar h3, .botonDonar h3 {
+      -webkit-text-stroke: 2px black;
+      color: #A8D3DA;
+      font-size: 2rem;
+      font-weight: bold; }
+  .contenedorAyuda h2, .contenedorDonar h2, .botonDonar h2 {
+    -webkit-text-stroke: 2px black;
+    color: #A8D3DA;
+    font-size: 2rem;
     font-weight: bold; }
-  .formContac .btn {
-    margin-left: 0px; } }
+  .contenedorGranito p {
+    font-size: 2rem;
+    text-align: center; }
+  .contenedorPago {
+    margin-top: 0; }
+    .contenedorPago a {
+      font-size: 1rem;
+      background-color: #B590CA;
+      border-radius: 1.5rem;
+      padding: 8px; }
+  .contenedorPago {
+    height: 2px; }
+  #gridDonar {
+    grid-template-rows: 200px 100px  100px  50px  100px  100px; }
+  /*transito*/
+  #flexTransito {
+    flex-direction: column;
+    justify-content: center; }
+  .contenedorConseguir {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 0px; }
+  .formuTran .row {
+    width: 70%; }
+  .formuTran input {
+    font-size: 1rem; }
+  .formuTran .btn {
+    font-size: 1rem; }
+  /*contacto*/
+  .formContac {
+    grid-area: a1;
+    background-color: #A8D3DA;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    padding: 2rem; }
+    .formContac input {
+      font-size: 1rem; }
+    .formContac .form-select {
+      font-size: 1rem; }
+    .formContac label {
+      font-weight: bold; }
+    .formContac legend {
+      font-weight: bold;
+      font-size: 1.2rem; }
+    .formContac .btn {
+      width: 100%;
+      font-size: 1rem; }
+    .formContac .form-control {
+      font-size: 1rem; }
+  .gatoLado {
+    grid-area: a2;
+    margin-right: 100px;
+    margin-top: 50px; }
+    .gatoLado img {
+      grid-area: a2;
+      width: 100px;
+      margin-right: 200px; }
+  #gridContac {
+    display: grid;
+    grid-template-columns: 50% 15%;
+    grid-template-rows: 450px;
+    justify-content: center; }
+  /*inicio de sesion*/
+  #gridSesion {
+    grid-template-columns: 60%; }
+  #formInicioSesion {
+    height: 28rem; }
+    #formInicioSesion form label {
+      margin-left: 95px; }
+    #formInicioSesion form .btn {
+      margin-left: 5px; }
+    #formInicioSesion form a {
+      margin-left: 45px; }
+  /*tuCuenta*/
+  .formu .row {
+    display: flex;
+    flex-direction: column; }
+  .formu .col {
+    margin-left: 70px; }
+  .formu .col.right {
+    margin-left: 70px; } }

@@ -8,17 +8,29 @@
 .formContac{
     grid-area:a1;
     background-color:$colorAzul;
-    border-radius: 15px;
-    margin-top: 30px;
-    padding: 20px;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    
+    input{
+        font-size: 2rem;
+    }
+    .form-select{
+        font-size: 2rem;}
     label{
         font-weight: bold;
     }
+    
     legend{
         font-weight: bold;
+        font-size: 2.5rem;
     } 
     .btn{
-        margin-left: 150px;
+       width: 100%;
+       font-size: 2rem;
+    }
+    .form-control{
+        font-size: 2rem;
     }
     }
 

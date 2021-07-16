@@ -20,7 +20,7 @@
     background-color: $colorAzul;
     width:100%;
     border-radius: 15px;
-    height: 330px;
+    height: auto;
     grid-area: a2;
     form{
         
@@ -28,6 +28,7 @@
          width:80%;
          margin-left: auto;
          margin-right: auto;
+         font-size: 2rem;
        }
        label{
          
@@ -36,18 +37,23 @@
         
        }
        #emailHelp{
-           margin-left: 30px;
+           margin-left: 3rem;
        }
       .form-label1{
-       margin-top: 20px;
+       margin-top: 2rem;
       }
       .btn{
-          margin-left: 80px;
+
+          margin-top: 1rem;
+          margin-left: 1rem;
+          font-size: 2rem;
+          width: 92%;
       }
      a{
-         margin-left: 80px;
-         margin-bottom: 20px;
+         margin-left: 8rem;
+         margin-bottom: 2rem;
          font-weight: bold;
+         
      }
     }
 
