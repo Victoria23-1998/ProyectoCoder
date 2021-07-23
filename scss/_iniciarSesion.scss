@@ -6,6 +6,7 @@
     grid-template-areas: "a1"
     "a2";
     justify-content: center;
+    margin-top: 2rem;
 }
 .imagenS{
     grid-area: a1;
@@ -19,42 +20,79 @@
     
     background-color: $colorAzul;
     width:100%;
-    border-radius: 15px;
+    border-radius: $redondeado;
     height: auto;
     grid-area: a2;
-    form{
-        
-       input{
-         width:80%;
+    padding-left: 20px;
+    padding-right: 20px;
+    body.dark &{
+        background: $oscuro3;
+    }
+    
+        input{
+         width:100%;
          margin-left: auto;
          margin-right: auto;
          font-size: 2rem;
        }
        label{
          
-        margin-left:170px;
+        
         font-weight: bold;
         
        }
        #emailHelp{
-           margin-left: 3rem;
+         font-size: 1.5rem;
+         text-align: center;
+         display: inline-block;
        }
       .form-label1{
        margin-top: 2rem;
       }
       .btn{
-
-          margin-top: 1rem;
-          margin-left: 1rem;
-          font-size: 2rem;
-          width: 92%;
+          width: 100%;
+          margin-top: 20px;
+          padding: 0;
       }
-     a{
-         margin-left: 8rem;
-         margin-bottom: 2rem;
-         font-weight: bold;
-         
-     }
+      .btn-primary{
+
+            font-size: 2rem;
+            width: 100%;
+            margin-bottom: 1rem;
+            background: $colorMorado;
+            border: $colorMorado;
+            margin: 0;
+            padding: 0;
+            height: 50px;
+            &:hover{
+                background:#a987bd;
+            }
+      }
+    a{
+       
+        margin-top: 2rem;
+        font-weight: bold;
+       text-align: center;
+       width: 100%;
+       display: inline-block;
+       color: $colorOscuro;
+       &:hover{
+           color: whitesmoke;
+       }
+       body.dark &{
+           color: whitesmoke;
+           &:hover{
+               color: rgb(173, 170, 170);
+           }
+       }
+    }
+    .form-check{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+}
+#formInicioSesion form .btn{
+    margin-left: 0px;
 }

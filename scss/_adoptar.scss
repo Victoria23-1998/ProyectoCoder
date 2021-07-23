@@ -1,54 +1,76 @@
 body{
   font-size: 2rem;
+  background: whitesmoke;
+  &.dark{
+    background:#303a52;
+  }
 }
 #gridAdoptar1{
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 300px 200px;
+    grid-template-rows: auto auto;
     grid-template-areas:
     "area1 area2"
     "area3 area3";
+    margin-top: 6rem;
 }
 .textoAdopcion{
     grid-area: area3;
-    margin-top: 4.375rem;
+    margin-top: 6rem;
+    background-color: $colorRosa;
+    padding: 25px;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+    box-shadow: 1px 1px 20px 10px #D1D1D1;
+    body.dark &{
+      background: $oscuro2;
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+    box-shadow: 1px 1px 20px 10px #2E2E2E;
     
+    }
     p{
-    text-align: center;
-  -webkit-text-stroke: 2px black;
-  color: #a8d3da; 
-  font-size: 3.5rem;
-  font-weight: bold;
+    text-align: justify;
+    color: $colorOscuro; 
+    font-size:2.5rem;
+    font-weight: bold;
   
     }
 }
 .contenedorAdopcion{
-    margin-top:2.5rem ;
+  
   background-image:url(../img/FONDO.jpg);
-  width:100%;
+  width:60%;
   border-radius: 30px;
   height: 100%;
   grid-area: area1;
+  justify-self:center;
+  padding: 2rem;
+  -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+    box-shadow: 1px 1px 20px 10px #D1D1D1;
+  body.dark &{
+    background: $oscuro2;
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+    box-shadow: 1px 1px 20px 10px #2E2E2E;
+  }
   h2{
       text-align: center;
-      @include estiloTitulo($border,$colorAzul,40px,$fontWeight);
-      margin-top: 20px;
-     
+      @include estiloTitulo($colorOscuro,30px,$fontWeight);
   }
   ul{
       text-align: center;
       list-style:none;
       li{
           font-weight: bold;
-          line-height: 3.125rem;
+          line-height: 5rem;
       }
      
   }
 }
 .imgAdopcion{
-    justify-self: center;
+    justify-self: left;
     margin-top: 2.5rem;
     grid-area: area2;
+    
   }
   #gridAdoptar2{
     display: grid;
@@ -72,6 +94,10 @@ body{
     font-weight: bold;
     border-radius: 0px 0px 25px 25px;
     font-size: 2rem;
+    body.dark &{
+      background: $oscuro1;
+    }
+    
     }
     img{
         width: 100%;
@@ -83,10 +109,18 @@ body{
           text-decoration: none;
           color: #132c33;
           font-size: 2rem;
-          font-weight: bold;}
-    a:hover{
-        color:$colorMorado;
-    }
+          font-weight: bold;
+          padding: 1.5rem;
+          body.dark &{
+            
+              color: whitesmoke;
+            
+          }
+          &:hover{
+            color:$colorMorado;
+        } 
+        }
+    
     
   }
   .tituloPerro{
@@ -95,10 +129,16 @@ body{
     width: 50%;
     border-radius: 0px 15px 15px 0px;
     padding-left: 0.9375rem;
+    body.dark &{
+      background: $oscuro1;
+    }
     
     h3{
       font-size: 3rem;
         font-weight: bold;
+        body.dark &{
+          color:whitesmoke;
+        }
       
     }
   }
@@ -142,6 +182,10 @@ body{
     border-radius: 15px;
     padding: 0.3125rem;
     margin-bottom: 0.5rem;
+    body.dark &{
+      background-color: $oscuro3;
+     
+    }
    
   
   }
@@ -199,10 +243,17 @@ body{
       a{
         text-decoration: none;
         color: #132c33;
-        font-size: 1.25rem;
-        font-weight: bold;}
-    a:hover{
-      color:$colorMorado;}
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1.5rem;
+        body.dark &{
+          color: whitesmoke;
+      }
+      &:hover{
+        color:$colorMorado;}
+    }
+        
+    
  }
  .tituloGato{
     grid-area: a1;
@@ -210,10 +261,16 @@ body{
     width: 50%;
     padding-left: 0.3125rem;
     border-radius: 0px 15px 15px 0px;
+    body.dark &{
+      background: $oscuro1;
+    }
     h3{
        
         font-weight: bold;
         font-size: 3rem;
+        body.dark &{
+          color:whitesmoke;
+        }
       
     }
 }
@@ -249,7 +306,9 @@ body{
     border-radius: 15px;
     padding: 0.3125rem;
     margin-bottom: 0.5rem;
-    
+    body.dark &{
+      background-color: $oscuro3;
+    }
   }
   .info10{
       @extend.info9;

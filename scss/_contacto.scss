@@ -11,6 +11,9 @@
     border-radius: 1.5rem;
     margin-top: 3rem;
     padding: 2rem;
+    body.dark &{
+        background: $oscuro3;
+    }
     
     input{
         font-size: 2rem;
@@ -19,20 +22,41 @@
         font-size: 2rem;}
     label{
         font-weight: bold;
+        color: $colorOscuro;
+        body.dark &{
+            color: whitesmoke;
+        }
     }
     
     legend{
         font-weight: bold;
         font-size: 2.5rem;
+        color: $colorOscuro;
+        body.dark &{
+            color: whitesmoke;
+        }
+        }
+        .btn{
+            width: 100%;
+            font-size: 2rem;
+            background-color: $colorMorado;
+             border: $colorMorado;
+             &:hover{
+                 background:#a987bd;
+             }
+             body.dark &{
+                 background: $oscuro1;
+                 &:hover{
+                     background:#a987bd;
+                 }
+             }
+         }
+         .form-control{
+             font-size: 2rem;
+         }
+         
     } 
-    .btn{
-       width: 100%;
-       font-size: 2rem;
-    }
-    .form-control{
-        font-size: 2rem;
-    }
-    }
+    
 
 .gatoLado{
     grid-area:a2;

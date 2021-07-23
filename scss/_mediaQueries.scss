@@ -5,6 +5,14 @@
     padding: 0;
     overflow-x: hidden;
     overflow-y: visible;}  
+    .navbar{
+        .navbar-toggler{
+            font-size: 2.5rem;
+        }
+        li{
+            font-size: 2rem;
+        }
+    }
     .mapa1{
         iframe{
             width: 100%;
@@ -48,7 +56,7 @@
         "a5 a6";
        
     .contenedorTips1{
-        padding: 0;
+        padding: 15px;
         margin: 0;
         p{
             padding: 0px;
@@ -65,8 +73,7 @@
     margin-top: 0;
     margin-left: 48rem;
     img{
-        width: 90px;
-        z-index: 10;
+        display: none;
 }
 }
 #gripMain2{
@@ -87,11 +94,9 @@ a{
 #gridAdoptar1{
     
     grid-template-columns: 50% 30%;
-    grid-template-rows: 200px 200px;
+    grid-template-rows: auto auto;
     justify-content: center;
-    grid-template-areas:
-    "area1 area2"
-    "area3 area3";
+    
     .imgAdopcion{
         align-self: center;
         img{
@@ -104,6 +109,7 @@ a{
     .textoAdopcion{
         width: 100%;
         margin-left: 1.25rem;
+        margin-top: 2rem;
         
         p{
            font-size:2rem;
@@ -111,8 +117,9 @@ a{
         }
     }
 }
+
 #gridAdoptar2{
-    margin-top:1rem;
+    margin-top:2rem;
     grid-template-rows: auto auto auto auto auto;
     h3{
         font-size: 2rem;
@@ -146,7 +153,7 @@ a{
 .tituloAdo{
     
     h2{
-    @include estiloTitulo($border,$colorMorado,2.5rem,$fontWeight);
+    @include estiloTitulo($colorMorado,2.5rem,$fontWeight);
 text-align: center;
 margin-bottom: 1.875rem;
 margin-top: 1.25rem;}
@@ -170,12 +177,15 @@ p{
         margin-top: 0px;
     h3{
            
-        @include estiloTitulo($border,$colorAzul,2.5rem,$fontWeight);
+        @include estiloTitulo($colorOscuro,2.5rem,$fontWeight);
     }
     }
     .contenedorAyuda{
         h2{
-            @include estiloTitulo($border,$colorAzul,2.5rem,$fontWeight);
+            @include estiloTitulo($colorOscuro,2.5rem,$fontWeight);
+        }
+        strong{
+            font-size: 2rem;
         }
     }
     .contenedorGranito{
@@ -185,7 +195,7 @@ p{
         }
     }
     .contenedorPago{
-        margin-top: 0;
+        margin-top: 2rem;
        a{
          @include botones(1.5rem, $colorMorado, 2rem, 8px);
         }
@@ -271,7 +281,7 @@ p{
     
 }
 #formInicioSesion{
-    height: 28rem;
+    height:auto;
 form label {
     margin-left: 120px;}
     font-size: 1.5rem;
@@ -280,13 +290,18 @@ form label {
         font-size: 1.5rem;
     }
     form a{
-        margin-left: 55px;
+        margin-left: 60px;
     }
     
 }
-
+#formInicioSesion form .btn{
+    margin-left: 0px;
+ }
+ #formInicioSesion form a{
+    margin-left: 0px;
 }
-@media (max-width: 576px){
+}
+@media (max-width: 600px){
     /*index*/
     body{
         font-size: 1rem;
@@ -296,6 +311,14 @@ form label {
     .rectangulo1{
             width: 100%;
             margin-top: 22.5rem;
+    }
+    .navbar{
+        .navbar-toggler{
+            font-size: 2.5rem;
+        }
+        li{
+            font-size: 2rem;
+        }
     }
     .flexMain1{
         flex-direction: column-reverse;
@@ -309,6 +332,9 @@ form label {
             margin-right: auto;
             width: 40%;
         }
+        p{
+            font-size: 1.5rem;
+        }
     }
     .flexMain2{
         flex-direction: column-reverse;
@@ -319,6 +345,9 @@ form label {
             iframe{
                 width: 100%;
             }
+        }
+        p{
+            font-size: 1.5rem
         }
     }
     .flexMain2{
@@ -365,14 +394,15 @@ form label {
         "a4"
         "a5"
         "a6";
-
+        margin-top: 1.5rem;
         .contenedorTips1{
-            padding: 0;
+            padding: 1.5rem;
             margin: 0;
             p{
                 padding: 0px;
                 margin: 0;  
                 padding: 0.625rem; 
+                font-size: 1.5rem
             }
         }
         h3{
@@ -381,16 +411,15 @@ form label {
         
     }
     .principal2{
-        
-        margin-top: 0;
-        margin-left: 28rem;
+      
         img{
-            width: 90px;
-            z-index: 10;
+           display: none;
     }
 }
 .titulo2{
     width: 80%;
+    margin-bottom: 1.5rem;
+    
 }
 .contenedorFooter{
     align-items: center;
@@ -405,15 +434,15 @@ form label {
 #gridAdoptar1{
     
     grid-template-columns: 50% 30%;
-    grid-template-rows: 200px 200px;
+    grid-template-rows: auto 200px;
     justify-content: center;
     grid-template-areas:
     "area1 area2"
     "area3 area3";
     .imgAdopcion{
-        align-self: center;
+        margin-left: 2rem;
         img{
-            width: 100px;
+            width: 150px;
         }
     }
     h2{
@@ -422,6 +451,7 @@ form label {
     .textoAdopcion{
         width: 100%;
         margin-left: 1.25rem;
+        margin-top: 2rem;
         
         p{
            font-size:1.6rem;
@@ -429,8 +459,11 @@ form label {
         }
     }
 }
+.contenedorAdopcion{
+    width: 100%;
+}
 #gridAdoptar2{
-    margin-top:1rem;
+    margin-top:2rem;
     grid-template-rows: auto auto auto auto auto;
     h3{
         font-size: 1.5rem;
@@ -464,18 +497,18 @@ form label {
 .tituloAdo{
     
     h2{
-    @include estiloTitulo($border,$colorMorado,2rem,$fontWeight);
+    @include estiloTitulo($colorMorado,2rem,$fontWeight);
 text-align: center;
 margin-bottom: 1.875rem;
 margin-top: 1.25rem;}
 }
 /*donaciones*/
 p{
-font-size: 1rem;
+font-size: 1.5rem;
 }
 .contenedorDonar{
     p{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
 .botonDonar{
@@ -488,12 +521,18 @@ font-size: 1rem;
     margin-top: 0px;
 h3{
        
-    @include estiloTitulo($border,$colorAzul,2rem,$fontWeight);
+    @include estiloTitulo($colorOscuro,2rem,$fontWeight);
+}
+p{
+    font-size: 1.5rem;
 }
 }
 .contenedorAyuda{
     h2{
-        @include estiloTitulo($border,$colorAzul,2rem,$fontWeight);
+        @include estiloTitulo($colorOscuro,2rem,$fontWeight);
+    }
+    strong{
+        font-size: 1.5rem;
     }
 }
 .contenedorGranito{
@@ -587,16 +626,24 @@ h3{
     
 }
 #formInicioSesion{
-    height: 28rem;
+    height: 30rem;
 form label {
     margin-left: 95px;}
     form .btn{
         margin-left: 5px;
     }
     form a{
-        margin-left: 45px;
+        margin-left: 65px;
     }
-    
+    #emailHelp{
+        display: none;
+    }
+}
+#formInicioSesion form .btn{
+    margin-left: 0px;
+ }
+ #formInicioSesion form a{
+    margin-left: 0px;
 }
 /*tuCuenta*/
 .formu .row{
@@ -610,5 +657,190 @@ margin-left: 70px;
 
 .formu .col.right {
     margin-left: 70px;
+}
+}
+@media (max-width:420px){
+   
+    .navbar{
+        .navbar-toggler{
+            font-size: 2rem;
+        }
+        li{
+            font-size: 1.5rem;
+        }
+    }
+    /*adoptar*/
+    #gridAdoptar1{
+        margin-top: 2rem;
+        justify-content: left;
+        margin-left:0px;
+        grid-template-columns: 50% 50%;
+       
+        .textoAdopcion{
+            margin-left: 0px;
+            width: 97%;
+            p{
+                font-size: 1.3rem;
+            }
+        }
+     
+    }
+    .contenedorAdopcion{
+       
+        width: 100%;
+        margin:0;
+      ul{
+        margin-right: 1rem;
+      li{
+       line-height: 2rem;
+       }
+        }
+    }
+    
+    .imgAdopcion{
+        margin-left: 3rem;
+    }
+    #gridAdoptar2{
+        margin-top: 6rem;
+        a{
+            padding: 0;
+           font-size: 9px;
+        }
+    }
+    #gridAdoptar3{
+        a{
+            padding: 0;
+           font-size: 9px;
+        }
+    }
+    /*trasito*/
+    .formuTran{
+        label{
+            font-weight: bold;
+          }
+    }
+    /*IniciaSesión*/
+    
+     #formInicioSesion form .btn{
+        margin-left: 0px;
+     }
+     #formInicioSesion form a{
+        margin-left: 0px;
+    }
+    /*donaciones*/
+    .btn-group-lg>.btn, .btn-lg{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 320px){
+  /*index*/
+  .mapa1{
+    iframe{
+        width: 100%;
+        height: 50%;
+    }
+} 
+.titulo2{
+    padding-right: 1rem;
+} 
+.principal2{
+    display: none;
+}
+.titulo2{
+    margin-bottom: 1.5rem;
+}
+#gridMain4{
+    margin-top: 2rem;
+    .contenedorTips1{
+        padding: 20px;
+    }
+}
+.navbar{
+    img{
+        width: 100px;
+    }
+}
+.navbar{
+.d-flex input{
+    font-size: 1rem;
+}
+}
+/*adoptar*/
+.contenedorAdopcion{
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 2rem;
+    
+    
+ul{
+    margin-right: 1rem;
+  li{
+   line-height: 2rem;
+   
+    }
+}
+}
+.textoAdopcion{
+display: none;
+
+
+}
+.imgAdopcion{
+  margin-top: 1rem;
+}
+#gridAdoptar2{
+    margin-top:2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px auto 50px auto 50px auto 50px auto 50px;
+    grid-template-areas: "a1 a1" "a2 a3" "a8 a9" "a4 a5" "a10 a11" "a14 a15" "a20 a21" "a16 a17" "a22 a23";
+    margin-right: 0px;
+    a{
+        padding: 0;
+       font-size: 1.5rem;
+    }
+}
+#gridAdoptar3{
+    margin-top:2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px auto 50px auto 50px auto 50px auto 50px;
+    grid-template-areas: "a1 a1" "a2 a3" "a8 a9" "a4 a5" "a10 a11" "a14 a15" "a20 a21" "a16 a17" "a22 a23";
+    margin-right: 0px;
+    a{
+        padding: 0;
+       font-size: 1.5rem;
+    }
+}
+#gridAdoptar1{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+}
+.tituloPerro{
+    padding-top: 1rem;
+}
+.tituloGato{
+    padding-top: 1rem;
+}
+/*transito*/
+.contenedorConseguir{
+    p{
+        font-size: 1rem;
+    }
+}
+/*inicioSesion*/
+#formInicioSesion form .btn{
+    margin-left: 0px;
+}
+#formInicioSesion form a{
+    margin-left: 0px;
+}
+/*donaciones*/
+.contenedorPago{
+    margin-top: 2rem;
+}
+.btn-group-lg>.btn, .btn-lg{
+    font-size: 1rem;
 }
 }

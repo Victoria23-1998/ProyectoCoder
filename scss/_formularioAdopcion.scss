@@ -1,13 +1,21 @@
 body{
     font-size: 2rem;
+    background: whitesmoke;
+    &.dark{
+        background: $oscuroFondo;
+    }
+    
 }
 .formuAdo{
-    background-color: $colorAzul;
+    border:#b7c6ca 1px solid;
     width: 40%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
     padding: 1.875rem;
+    body.dark &{
+        border:whitesmoke 1px solid;
+    }
     input{
         font-size: 2rem;
     }
@@ -17,12 +25,33 @@ body{
     .btn{
         font-size: 2rem;
         width: 100%;
+        background-color: $colorMorado;
+        border: $colorMorado;
+        &:hover{
+            background:#a987bd;
+        }
+        body.dark &{
+            background: $oscuro1;
+            &:hover{
+                background:#a987bd;
+            }
+        }
+    }
+    label{
+        color: $colorOscuro;
+        body.dark &{
+          color: whitesmoke;
+        }
     }
 }
 .tituloAdo{
     
     h2{
-    @include estiloTitulo($border,$colorMorado,4rem,$fontWeight);
+    @include estiloTitulo($colorMorado,4rem,$fontWeight);
 text-align: center;
-margin-bottom: 1.875rem;}
+margin-bottom: 1.875rem;
+body.dark &{
+    @include estiloTitulo($oscuro1,4rem,$fontWeight);
+  }
+}
 }

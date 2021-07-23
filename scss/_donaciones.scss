@@ -1,5 +1,9 @@
 body{
   font-size: 2rem;
+  background: whitesmoke;
+ &.dark{
+   background: $oscuroFondo;
+ }
 }
 #gridDonar{
     display:grid; 
@@ -26,10 +30,12 @@ body{
     justify-self: center;
     margin-top: 0.9375rem;
     p{
-        color:#a8d3da ;
-        -webkit-text-stroke: 2px #132c33;
+        color:$colorOscuro;
         font-size: 3rem;
         font-weight: bold; 
+        body.dark &{
+          color: whitesmoke;
+        }
       }
 }
 .contenedorAyuda{
@@ -37,12 +43,24 @@ body{
     justify-self: center;
     text-align: center;
     margin-top: 0.125rem;
+    width: 100%;
+  
+    strong{
+      color: $colorOscuro;
+      body.dark &{
+        color: whitesmoke;
+      }
+    }
     h2{
         margin-bottom: 0.9375rem;
         background-color:#f5cab3;
-        border-radius: 15px;
-        @include estiloTitulo($border,$colorAzul,3rem,$fontWeight);
+        border-radius: $redondeado;
         
+        @include estiloTitulo($colorOscuro,3rem,$fontWeight);
+        body.dark &{
+          background: $oscuro2;
+        }
+      
       }
     }
   .contenedorPago{
@@ -55,45 +73,64 @@ body{
         text-decoration: none;
         color: $colorOscuro;
         font-weight: bold;
-    }
-    a:hover{
+        
+        body.dark &{
+          @include botones(20px, $oscuro1, 1.5rem, 8px);
+          }
+      &:hover{
         color:azure;
-    }
+    } 
+  }
 }
   .contenedorDonar{
-      @extend.contenedorAyuda;
+   @extend.contenedorAyuda;
     grid-area: area5;
-   
     
     p{
-     font-size: 2.5rem;
-        margin-top: 0.9375rem;
-        text-align: center;
-        font-weight: bold;
+     font-size: 2rem;
+      margin-top: 0.9375rem;
+      text-align: center;
+      font-weight: bold;
+      body.dark &{
+      color: whitesmoke;
       }
+     }
       h3{
-        background-color:#f5cab3;
-        border-radius: 15px;
-        @include estiloTitulo($border,$colorAzul,3rem,$fontWeight);
+        background-color:$colorRosa;
+        border-radius:$redondeado;
+        @include estiloTitulo($colorOscuro,3rem,$fontWeight);
+        body.dark &{
+          background: $oscuro2;
+        }
     }
 
     }
   .botonDonar{
-      @extend.contenedorDonar;
+     
     grid-area: area6;
-    margin-top: 3.75rem;
+    margin-top: 2rem;
 
-    a{
-        text-decoration: none;
-        @include botones(20px, $colorMorado, 1.5rem, 8px);
-        text-decoration: none;
-        color: $colorOscuro;
-        font-weight: bold;
-    }
-    a:hover{
-        color:azure;
-    }
-}
     
+  }
+  .mx-auto{
+    background-color:$colorMorado;
+    border-radius: $redondeado;
+    body.dark &{
+      background: $oscuro1;
+    }
+    
+  }
+  .btn-group-lg>.btn, .btn-lg{
+    font-size: 2rem;
+    font-weight: bold;
+    color: $colorOscuro;
+    &:hover{
+      color:azure;}
+      body.dark &{
+        &:hover{
+          color:azure;}
+      }
+  }
+ 
         
     

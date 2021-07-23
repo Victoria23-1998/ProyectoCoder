@@ -13,15 +13,21 @@ body {
   font-size: 2rem;
   padding-left: 30px;
   padding-right: 30px;
-  overflow-x: auto; }
+  overflow-x: auto;
+  background: whitesmoke;
+  transition: .3s ease all; }
+  body.dark {
+    background: #303a52; }
   body p {
     text-align: justify; }
 
 .flexMain1 {
   display: flex;
   background-color: #B590CA;
-  margin-top: 1.875rem;
+  margin-top: 3rem;
   border-radius: 15px; }
+  body.dark .flexMain1 {
+    background: #9E579D; }
   .flexMain1 .contenedorTexto {
     padding: 1.25rem; }
   .flexMain1 .imagenP {
@@ -30,16 +36,18 @@ body {
     .flexMain1 .imagenP img {
       width: 100%; }
   .flexMain1 h1 {
-    color: #a8d3da;
-    -webkit-text-stroke: 2px #132c33;
-    font-size: 3rem;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
     font-weight: bold; }
 
 .flexMain2 {
   display: flex;
   background-color: #B590CA;
-  margin-top: 1.875rem;
+  margin-top: 3rem;
   border-radius: 15px; }
+  body.dark .flexMain2 {
+    background: #9E579D; }
   .flexMain2 .contenedorTexto2 {
     padding: 1.25rem; }
   .flexMain2 .mapa1 {
@@ -47,8 +55,8 @@ body {
     .flexMain2 .mapa1 iframe {
       border-radius: 15px; }
   .flexMain2 h2 {
-    color: #a8d3da;
-    -webkit-text-stroke: 2px #132c33;
+    color: whitesmoke;
+    margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: bold;
     text-align: center; }
@@ -58,7 +66,7 @@ body {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 200px 60px;
   grid-template-areas: "area2 area3 area4 area5" "area6 area7 area8 area9";
-  margin-top: 2.5rem; }
+  margin-top: 3rem; }
 
 .opcion1, .opcion2, .opcion3, .opcion4, .opcion, .opcionDos, .opcionTres, .opcionCuatro {
   grid-area: area2;
@@ -96,27 +104,34 @@ body {
   width: 95%;
   height: 55px;
   background-color: #f5cab3;
-  margin-top: 7.5rem;
+  margin-top: 9rem;
   z-index: -10; }
+  body.dark .rectangulo1 {
+    background: #FC85AE; }
 
 #gridMain4 {
   display: grid;
-  grid-template-columns: 26% 20.5% 30% 20%;
+  grid-template-columns: auto auto 30% 20%;
   grid-template-rows: 60px auto auto;
   grid-template-areas: "a1 a1 a1 a2" "a3 a3 a4 a4" "a5 a5 a6 a6";
-  column-gap: 0.9375rem;
-  row-gap: 0.9375rem;
-  margin-top: 2.5rem; }
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+  margin-top: 12rem; }
 
 .titulo2 {
   grid-area: a1;
   background-color: #A8D3DA;
   border-radius: 0px 15px 15px 0px;
   align-self: center;
-  padding-left: 20px; }
+  padding-left: 20px;
+  margin-bottom: 80px;
+  width: 80%; }
+  body.dark .titulo2 {
+    background: #574B90; }
+    body.dark .titulo2 h3 {
+      color: whitesmoke; }
   .titulo2 h3 {
-    color: #B590CA;
-    -webkit-text-stroke: 2px #132c33;
+    color: #132c33;
     font-size: 3rem;
     font-weight: bold; }
 
@@ -124,34 +139,35 @@ body {
   grid-area: a3;
   background-color: #f5cab3;
   border-radius: 15px; }
+  body.dark .contenedorTips1, body.dark .contenedorTips2, body.dark .contenedorTips3, body.dark .contenedorTips4 {
+    background: #FC85AE; }
   .contenedorTips1 p, .contenedorTips2 p, .contenedorTips3 p, .contenedorTips4 p {
-    padding: 20px 100px 20px 20px;
+    padding: 3rem;
     text-align: justify; }
 
 .contenedorTips2 {
   grid-area: a4; }
   .contenedorTips2 p {
-    padding: 1.25rem 1.875rem 1.25rem 5rem;
+    padding: 3rem;
     text-align: justify; }
 
 .contenedorTips3 {
   grid-area: a5; }
   .contenedorTips3 p {
-    padding: 5.625rem 1.875rem 1.875rem 1.875rem;
-    text-align: justify;
-    margin-right: 3.75rem; }
+    padding: 3rem;
+    text-align: justify; }
 
 .contenedorTips4 {
   grid-area: a6; }
   .contenedorTips4 p {
-    padding: 3.75rem 1.875rem 1.875rem 5rem;
+    padding: 3rem;
     text-align: justify;
     margin-top: 1.875rem; }
 
 .principal2 {
   position: absolute;
-  margin-top: 42rem;
-  margin-left: 53.5rem; }
+  margin-top: 2rem;
+  margin-left: 72.5rem; }
   .principal2 img {
     width: 15.625rem;
     z-index: 10; }
@@ -161,7 +177,8 @@ footer {
   height: auto;
   background-color: #131313;
   margin-top: 2.5rem;
-  padding: 0.9375rem; }
+  padding: 0.9375rem;
+  border-radius: 10px; }
 
 .contenedorFooter ul {
   width: 30%;
@@ -186,20 +203,30 @@ footer {
   text-decoration: none;
   color: #132c33;
   font-weight: bold; }
+  body.dark #gripMain2 a {
+    background: #9E579D; }
 
 #gripMain2 a:hover {
   color: seashell; }
 
 .nav-item a {
   color: #131313 !important;
-  font-weight: bold; }
+  font-size: 1.9rem; }
+  body.dark .nav-item a {
+    color: whitesmoke !important; }
+    body.dark .nav-item a:hover {
+      color: #9E579D !important; }
 
 .nav-item a:hover {
   color: #B590CA !important; }
 
 .navbar {
-  border-top: 1px solid #afadad;
-  border-bottom: 1px solid #afadad; }
+  -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+  box-shadow: 1px 1px 20px 10px #D1D1D1;
+  border-radius: 10px; }
+  body.dark .navbar {
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+    box-shadow: 1px 1px 20px 10px #2E2E2E; }
   .navbar .btn:hover {
     background-color: #B590CA; }
   .navbar .d-flex input {
@@ -208,48 +235,109 @@ footer {
 .contenedorI {
   width: 100%; }
 
+#carouselExampleControls {
+  margin-top: 30px; }
+
+.carousel-inner {
+  border-radius: 15px; }
+  .carousel-inner img {
+    border-radius: 15px; }
+
+.switch {
+  margin-right: 2rem;
+  background: #132c33;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  outline: none;
+  display: flex;
+  cursor: pointer; }
+  .switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: whitesmoke;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  .switch.active {
+    background: orange;
+    color: #fff; }
+    .switch.active::after {
+      right: 0;
+      left: unset; }
+  .switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff; }
+
 body {
-  font-size: 2rem; }
+  font-size: 2rem;
+  background: whitesmoke; }
+  body.dark {
+    background: #303a52; }
 
 #gridAdoptar1 {
   display: grid;
   grid-template-columns: 60% 40%;
-  grid-template-rows: 300px 200px;
-  grid-template-areas: "area1 area2" "area3 area3"; }
+  grid-template-rows: auto auto;
+  grid-template-areas: "area1 area2" "area3 area3";
+  margin-top: 6rem; }
 
 .textoAdopcion {
   grid-area: area3;
-  margin-top: 4.375rem; }
+  margin-top: 6rem;
+  background-color: #f5cab3;
+  padding: 25px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+  box-shadow: 1px 1px 20px 10px #D1D1D1; }
+  body.dark .textoAdopcion {
+    background: #FC85AE;
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+    box-shadow: 1px 1px 20px 10px #2E2E2E; }
   .textoAdopcion p {
-    text-align: center;
-    -webkit-text-stroke: 2px black;
-    color: #a8d3da;
-    font-size: 3.5rem;
+    text-align: justify;
+    color: #132c33;
+    font-size: 2.5rem;
     font-weight: bold; }
 
 .contenedorAdopcion {
-  margin-top: 2.5rem;
   background-image: url(../img/FONDO.jpg);
-  width: 100%;
+  width: 60%;
   border-radius: 30px;
   height: 100%;
-  grid-area: area1; }
+  grid-area: area1;
+  justify-self: center;
+  padding: 2rem;
+  -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+  box-shadow: 1px 1px 20px 10px #D1D1D1; }
+  body.dark .contenedorAdopcion {
+    background: #FC85AE;
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+    box-shadow: 1px 1px 20px 10px #2E2E2E; }
   .contenedorAdopcion h2 {
     text-align: center;
-    -webkit-text-stroke: 2px black;
-    color: #A8D3DA;
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 20px; }
+    color: #132c33;
+    font-size: 30px;
+    font-weight: bold; }
   .contenedorAdopcion ul {
     text-align: center;
     list-style: none; }
     .contenedorAdopcion ul li {
       font-weight: bold;
-      line-height: 3.125rem; }
+      line-height: 5rem; }
 
 .imgAdopcion {
-  justify-self: center;
+  justify-self: left;
   margin-top: 2.5rem;
   grid-area: area2; }
 
@@ -270,6 +358,8 @@ body {
     font-weight: bold;
     border-radius: 0px 0px 25px 25px;
     font-size: 2rem; }
+    body.dark #gridAdoptar2 h4 {
+      background: #9E579D; }
   #gridAdoptar2 img {
     width: 100%;
     vertical-align: top;
@@ -278,9 +368,12 @@ body {
     text-decoration: none;
     color: #132c33;
     font-size: 2rem;
-    font-weight: bold; }
-  #gridAdoptar2 a:hover {
-    color: #B590CA; }
+    font-weight: bold;
+    padding: 1.5rem; }
+    body.dark #gridAdoptar2 a {
+      color: whitesmoke; }
+    #gridAdoptar2 a:hover {
+      color: #B590CA; }
 
 .tituloPerro {
   grid-area: a1;
@@ -288,9 +381,13 @@ body {
   width: 50%;
   border-radius: 0px 15px 15px 0px;
   padding-left: 0.9375rem; }
+  body.dark .tituloPerro {
+    background: #9E579D; }
   .tituloPerro h3 {
     font-size: 3rem;
     font-weight: bold; }
+    body.dark .tituloPerro h3 {
+      color: whitesmoke; }
 
 .imagen1 {
   grid-area: a2; }
@@ -324,6 +421,8 @@ body {
   border-radius: 15px;
   padding: 0.3125rem;
   margin-bottom: 0.5rem; }
+  body.dark .info1, body.dark .info2, body.dark .info3, body.dark .info4, body.dark .info5, body.dark .info6, body.dark .info7, body.dark .info8 {
+    background-color: #574B90; }
 
 .info2 {
   grid-area: a9; }
@@ -371,10 +470,13 @@ body {
   #gridAdoptar3 a {
     text-decoration: none;
     color: #132c33;
-    font-size: 1.25rem;
-    font-weight: bold; }
-  #gridAdoptar3 a:hover {
-    color: #B590CA; }
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.5rem; }
+    body.dark #gridAdoptar3 a {
+      color: whitesmoke; }
+    #gridAdoptar3 a:hover {
+      color: #B590CA; }
 
 .tituloGato {
   grid-area: a1;
@@ -382,9 +484,13 @@ body {
   width: 50%;
   padding-left: 0.3125rem;
   border-radius: 0px 15px 15px 0px; }
+  body.dark .tituloGato {
+    background: #9E579D; }
   .tituloGato h3 {
     font-weight: bold;
     font-size: 3rem; }
+    body.dark .tituloGato h3 {
+      color: whitesmoke; }
 
 .imagen9 {
   grid-area: a2; }
@@ -418,6 +524,8 @@ body {
   border-radius: 15px;
   padding: 0.3125rem;
   margin-bottom: 0.5rem; }
+  body.dark .info9, body.dark .info10, body.dark .info11, body.dark .info12, body.dark .info13, body.dark .info14, body.dark .info15, body.dark .info16 {
+    background-color: #574B90; }
 
 .info10 {
   grid-area: a9; }
@@ -441,7 +549,10 @@ body {
   grid-area: a23; }
 
 body {
-  font-size: 2rem; }
+  font-size: 2rem;
+  background: whitesmoke; }
+  body.dark {
+    background: #303A52; }
 
 #gridDonar {
   display: grid;
@@ -461,24 +572,31 @@ body {
   justify-self: center;
   margin-top: 0.9375rem; }
   .contenedorGranito p {
-    color: #a8d3da;
-    -webkit-text-stroke: 2px #132c33;
+    color: #132c33;
     font-size: 3rem;
     font-weight: bold; }
+    body.dark .contenedorGranito p {
+      color: whitesmoke; }
 
-.contenedorAyuda, .contenedorDonar, .botonDonar {
+.contenedorAyuda, .contenedorDonar {
   grid-area: area3;
   justify-self: center;
   text-align: center;
-  margin-top: 0.125rem; }
-  .contenedorAyuda h2, .contenedorDonar h2, .botonDonar h2 {
+  margin-top: 0.125rem;
+  width: 100%; }
+  .contenedorAyuda strong, .contenedorDonar strong {
+    color: #132c33; }
+    body.dark .contenedorAyuda strong, body.dark .contenedorDonar strong {
+      color: whitesmoke; }
+  .contenedorAyuda h2, .contenedorDonar h2 {
     margin-bottom: 0.9375rem;
     background-color: #f5cab3;
     border-radius: 15px;
-    -webkit-text-stroke: 2px black;
-    color: #A8D3DA;
+    color: #132c33;
     font-size: 3rem;
     font-weight: bold; }
+    body.dark .contenedorAyuda h2, body.dark .contenedorDonar h2 {
+      background: #FC85AE; }
 
 .contenedorPago {
   grid-area: area4;
@@ -493,37 +611,49 @@ body {
     text-decoration: none;
     color: #132c33;
     font-weight: bold; }
-  .contenedorPago a:hover {
-    color: azure; }
+    body.dark .contenedorPago a {
+      font-size: 20px;
+      background-color: #9E579D;
+      border-radius: 1.5rem;
+      padding: 8px; }
+    .contenedorPago a:hover {
+      color: azure; }
 
-.contenedorDonar, .botonDonar {
+.contenedorDonar {
   grid-area: area5; }
-  .contenedorDonar p, .botonDonar p {
-    font-size: 2.5rem;
+  .contenedorDonar p {
+    font-size: 2rem;
     margin-top: 0.9375rem;
     text-align: center;
     font-weight: bold; }
-  .contenedorDonar h3, .botonDonar h3 {
+    body.dark .contenedorDonar p {
+      color: whitesmoke; }
+  .contenedorDonar h3 {
     background-color: #f5cab3;
     border-radius: 15px;
-    -webkit-text-stroke: 2px black;
-    color: #A8D3DA;
+    color: #132c33;
     font-size: 3rem;
     font-weight: bold; }
+    body.dark .contenedorDonar h3 {
+      background: #FC85AE; }
 
 .botonDonar {
   grid-area: area6;
-  margin-top: 3.75rem; }
-  .botonDonar a {
-    text-decoration: none;
-    font-size: 20px;
-    background-color: #B590CA;
-    border-radius: 1.5rem;
-    padding: 8px;
-    text-decoration: none;
-    color: #132c33;
-    font-weight: bold; }
-  .botonDonar a:hover {
+  margin-top: 2rem; }
+
+.mx-auto {
+  background-color: #B590CA;
+  border-radius: 15px; }
+  body.dark .mx-auto {
+    background: #9E579D; }
+
+.btn-group-lg > .btn, .btn-lg {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #132c33; }
+  .btn-group-lg > .btn:hover, .btn-lg:hover {
+    color: azure; }
+  body.dark .btn-group-lg > .btn:hover, body.dark .btn-lg:hover {
     color: azure; }
 
 #gridSesion {
@@ -531,7 +661,8 @@ body {
   grid-template-columns: 30%;
   grid-template-rows: 100px 330px;
   grid-template-areas: "a1" "a2";
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 2rem; }
 
 .imagenS {
   grid-area: a1;
@@ -544,28 +675,59 @@ body {
   width: 100%;
   border-radius: 15px;
   height: auto;
-  grid-area: a2; }
-  #formInicioSesion form input {
-    width: 80%;
+  grid-area: a2;
+  padding-left: 20px;
+  padding-right: 20px; }
+  body.dark #formInicioSesion {
+    background: #574B90; }
+  #formInicioSesion input {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-size: 2rem; }
-  #formInicioSesion form label {
-    margin-left: 170px;
+  #formInicioSesion label {
     font-weight: bold; }
-  #formInicioSesion form #emailHelp {
-    margin-left: 3rem; }
-  #formInicioSesion form .form-label1 {
+  #formInicioSesion #emailHelp {
+    font-size: 1.5rem;
+    text-align: center;
+    display: inline-block; }
+  #formInicioSesion .form-label1 {
     margin-top: 2rem; }
-  #formInicioSesion form .btn {
-    margin-top: 1rem;
-    margin-left: 1rem;
+  #formInicioSesion .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0; }
+  #formInicioSesion .btn-primary {
     font-size: 2rem;
-    width: 92%; }
-  #formInicioSesion form a {
-    margin-left: 8rem;
-    margin-bottom: 2rem;
-    font-weight: bold; }
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #B590CA;
+    border: #B590CA;
+    margin: 0;
+    padding: 0;
+    height: 50px; }
+    #formInicioSesion .btn-primary:hover {
+      background: #a987bd; }
+  #formInicioSesion a {
+    margin-top: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    color: #132c33; }
+    #formInicioSesion a:hover {
+      color: whitesmoke; }
+    body.dark #formInicioSesion a {
+      color: whitesmoke; }
+      body.dark #formInicioSesion a:hover {
+        color: #adaaaa; }
+  #formInicioSesion .form-check {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; }
+
+#formInicioSesion form .btn {
+  margin-left: 0px; }
 
 .formu .row {
   width: 550px;
@@ -670,30 +832,50 @@ body {
   height: 8px; }
 
 body {
-  font-size: 2rem; }
+  font-size: 2rem;
+  background: whitesmoke; }
+  body.dark {
+    background: #303A52; }
 
 .formuAdo {
-  background-color: #A8D3DA;
+  border: #b7c6ca 1px solid;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
   padding: 1.875rem; }
+  body.dark .formuAdo {
+    border: whitesmoke 1px solid; }
   .formuAdo input {
     font-size: 2rem; }
   .formuAdo .form-select {
     font-size: 2rem; }
   .formuAdo .btn {
     font-size: 2rem;
-    width: 100%; }
+    width: 100%;
+    background-color: #B590CA;
+    border: #B590CA; }
+    .formuAdo .btn:hover {
+      background: #a987bd; }
+    body.dark .formuAdo .btn {
+      background: #9E579D; }
+      body.dark .formuAdo .btn:hover {
+        background: #a987bd; }
+  .formuAdo label {
+    color: #132c33; }
+    body.dark .formuAdo label {
+      color: whitesmoke; }
 
 .tituloAdo h2 {
-  -webkit-text-stroke: 2px black;
   color: #B590CA;
   font-size: 4rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 1.875rem; }
+  body.dark .tituloAdo h2 {
+    color: #9E579D;
+    font-size: 4rem;
+    font-weight: bold; }
 
 #flexTransito {
   display: flex;
@@ -708,9 +890,19 @@ body {
   width: 30%;
   border-radius: 30px;
   font-weight: bold;
-  margin-left: 7.5rem; }
+  margin-left: 7.5rem;
+  -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+  box-shadow: 1px 1px 20px 10px #D1D1D1; }
+  body.dark .contenedorConseguir {
+    background: #FC85AE;
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+    box-shadow: 1px 1px 20px 10px #2E2E2E;
+    background: #574B90; }
   .contenedorConseguir p {
-    text-align: center; }
+    text-align: center;
+    color: #132c33; }
+    body.dark .contenedorConseguir p {
+      color: whitesmoke; }
 
 .contenedorTransito {
   margin-right: 3.125rem; }
@@ -731,11 +923,27 @@ body {
 .formuTran .btn {
   font-size: 2rem;
   width: 100%;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  background-color: #B590CA;
+  border: #B590CA; }
+  .formuTran .btn:hover {
+    background: #a987bd; }
+  body.dark .formuTran .btn {
+    background: #9E579D; }
+    body.dark .formuTran .btn:hover {
+      background: #a987bd; }
 
 .formuTran h2 {
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #132c33; }
+  body.dark .formuTran h2 {
+    color: whitesmoke; }
+
+.formuTran label {
+  color: #132c33; }
+  body.dark .formuTran label {
+    color: whitesmoke; }
 
 #gridContac {
   display: grid;
@@ -750,18 +958,34 @@ body {
   border-radius: 1.5rem;
   margin-top: 3rem;
   padding: 2rem; }
+  body.dark .formContac {
+    background: #574B90; }
   .formContac input {
     font-size: 2rem; }
   .formContac .form-select {
     font-size: 2rem; }
   .formContac label {
-    font-weight: bold; }
+    font-weight: bold;
+    color: #132c33; }
+    body.dark .formContac label {
+      color: whitesmoke; }
   .formContac legend {
     font-weight: bold;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #132c33; }
+    body.dark .formContac legend {
+      color: whitesmoke; }
   .formContac .btn {
     width: 100%;
-    font-size: 2rem; }
+    font-size: 2rem;
+    background-color: #B590CA;
+    border: #B590CA; }
+    .formContac .btn:hover {
+      background: #a987bd; }
+    body.dark .formContac .btn {
+      background: #9E579D; }
+      body.dark .formContac .btn:hover {
+        background: #a987bd; }
   .formContac .form-control {
     font-size: 2rem; }
 
@@ -781,6 +1005,10 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: visible; }
+  .navbar .navbar-toggler {
+    font-size: 2.5rem; }
+  .navbar li {
+    font-size: 2rem; }
   .mapa1 iframe {
     width: 100%; }
   .flexMain1 {
@@ -806,7 +1034,7 @@ body {
     grid-template-rows: 60px auto auto;
     grid-template-areas: "a1 a1" "a3 a4" "a5 a6"; }
     #gridMain4 .contenedorTips1, #gridMain4 .contenedorTips2, #gridMain4 .contenedorTips3, #gridMain4 .contenedorTips4 {
-      padding: 0;
+      padding: 15px;
       margin: 0; }
       #gridMain4 .contenedorTips1 p, #gridMain4 .contenedorTips2 p, #gridMain4 .contenedorTips3 p, #gridMain4 .contenedorTips4 p {
         padding: 0px;
@@ -818,8 +1046,7 @@ body {
     margin-top: 0;
     margin-left: 48rem; }
     .principal2 img {
-      width: 90px;
-      z-index: 10; }
+      display: none; }
   #gripMain2 .opcion1 img, #gripMain2 .opcion2 img, #gripMain2 .opcion3 img, #gripMain2 .opcion4 img, #gripMain2 .opcion img, #gripMain2 .opcionDos img, #gripMain2 .opcionTres img, #gripMain2 .opcionCuatro img {
     width: 180px; }
   #gripMain2 a {
@@ -829,9 +1056,8 @@ body {
   /*adopcion*/
   #gridAdoptar1 {
     grid-template-columns: 50% 30%;
-    grid-template-rows: 200px 200px;
-    justify-content: center;
-    grid-template-areas: "area1 area2" "area3 area3"; }
+    grid-template-rows: auto auto;
+    justify-content: center; }
     #gridAdoptar1 .imgAdopcion {
       align-self: center; }
       #gridAdoptar1 .imgAdopcion img {
@@ -840,11 +1066,12 @@ body {
       font-size: 2rem; }
     #gridAdoptar1 .textoAdopcion {
       width: 100%;
-      margin-left: 1.25rem; }
+      margin-left: 1.25rem;
+      margin-top: 2rem; }
       #gridAdoptar1 .textoAdopcion p {
         font-size: 2rem; }
   #gridAdoptar2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
     grid-template-rows: auto auto auto auto auto; }
     #gridAdoptar2 h3 {
       font-size: 2rem; }
@@ -867,7 +1094,6 @@ body {
     .formuAdo .btn {
       font-size: 2rem; }
   .tituloAdo h2 {
-    -webkit-text-stroke: 2px black;
     color: #B590CA;
     font-size: 2.5rem;
     font-weight: bold;
@@ -877,7 +1103,7 @@ body {
   /*donaciones*/
   p {
     font-size: 2rem; }
-  .contenedorDonar p, .botonDonar p {
+  .contenedorDonar p {
     font-size: 2rem; }
   .botonDonar {
     margin-top: 0; }
@@ -886,23 +1112,23 @@ body {
       background-color: #B590CA;
       border-radius: 2rem;
       padding: 8px; }
-  .contenedorDonar, .botonDonar {
+  .contenedorDonar {
     margin-top: 0px; }
-    .contenedorDonar h3, .botonDonar h3 {
-      -webkit-text-stroke: 2px black;
-      color: #A8D3DA;
+    .contenedorDonar h3 {
+      color: #132c33;
       font-size: 2.5rem;
       font-weight: bold; }
-  .contenedorAyuda h2, .contenedorDonar h2, .botonDonar h2 {
-    -webkit-text-stroke: 2px black;
-    color: #A8D3DA;
+  .contenedorAyuda h2, .contenedorDonar h2 {
+    color: #132c33;
     font-size: 2.5rem;
     font-weight: bold; }
+  .contenedorAyuda strong, .contenedorDonar strong {
+    font-size: 2rem; }
   .contenedorGranito p {
     font-size: 2.5rem;
     text-align: center; }
   .contenedorPago {
-    margin-top: 0; }
+    margin-top: 2rem; }
     .contenedorPago a {
       font-size: 1.5rem;
       background-color: #B590CA;
@@ -966,7 +1192,7 @@ body {
   #gridSesion {
     grid-template-columns: 50%; }
   #formInicioSesion {
-    height: 28rem;
+    height: auto;
     font-size: 1.5rem; }
     #formInicioSesion form label {
       margin-left: 120px; }
@@ -974,9 +1200,13 @@ body {
       margin-left: 8px;
       font-size: 1.5rem; }
     #formInicioSesion form a {
-      margin-left: 55px; } }
+      margin-left: 60px; }
+  #formInicioSesion form .btn {
+    margin-left: 0px; }
+  #formInicioSesion form a {
+    margin-left: 0px; } }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   /*index*/
   body {
     font-size: 1rem;
@@ -986,6 +1216,10 @@ body {
   .rectangulo1 {
     width: 100%;
     margin-top: 22.5rem; }
+  .navbar .navbar-toggler {
+    font-size: 2.5rem; }
+  .navbar li {
+    font-size: 2rem; }
   .flexMain1 {
     flex-direction: column-reverse; }
     .flexMain1 h1 {
@@ -995,12 +1229,16 @@ body {
       margin-left: auto;
       margin-right: auto;
       width: 40%; }
+    .flexMain1 p {
+      font-size: 1.5rem; }
   .flexMain2 {
     flex-direction: column-reverse; }
     .flexMain2 h2 {
       font-size: 2rem; }
     .flexMain2 .mapa1 iframe {
       width: 100%; }
+    .flexMain2 p {
+      font-size: 1.5rem; }
   .flexMain2 {
     flex-direction: column-reverse; }
     .flexMain2 h2 {
@@ -1021,24 +1259,23 @@ body {
   #gridMain4 {
     grid-template-columns: auto;
     grid-template-rows: 60px auto auto auto auto;
-    grid-template-areas: "a1" "a3" "a4" "a5" "a6"; }
+    grid-template-areas: "a1" "a3" "a4" "a5" "a6";
+    margin-top: 1.5rem; }
     #gridMain4 .contenedorTips1, #gridMain4 .contenedorTips2, #gridMain4 .contenedorTips3, #gridMain4 .contenedorTips4 {
-      padding: 0;
+      padding: 1.5rem;
       margin: 0; }
       #gridMain4 .contenedorTips1 p, #gridMain4 .contenedorTips2 p, #gridMain4 .contenedorTips3 p, #gridMain4 .contenedorTips4 p {
         padding: 0px;
         margin: 0;
-        padding: 0.625rem; }
+        padding: 0.625rem;
+        font-size: 1.5rem; }
     #gridMain4 h3 {
       font-size: 1.8rem; }
-  .principal2 {
-    margin-top: 0;
-    margin-left: 28rem; }
-    .principal2 img {
-      width: 90px;
-      z-index: 10; }
+  .principal2 img {
+    display: none; }
   .titulo2 {
-    width: 80%; }
+    width: 80%;
+    margin-bottom: 1.5rem; }
   .contenedorFooter {
     align-items: center; }
     .contenedorFooter a {
@@ -1048,22 +1285,25 @@ body {
   /*Adoptar*/
   #gridAdoptar1 {
     grid-template-columns: 50% 30%;
-    grid-template-rows: 200px 200px;
+    grid-template-rows: auto 200px;
     justify-content: center;
     grid-template-areas: "area1 area2" "area3 area3"; }
     #gridAdoptar1 .imgAdopcion {
-      align-self: center; }
+      margin-left: 2rem; }
       #gridAdoptar1 .imgAdopcion img {
-        width: 100px; }
+        width: 150px; }
     #gridAdoptar1 h2 {
       font-size: 1.5rem; }
     #gridAdoptar1 .textoAdopcion {
       width: 100%;
-      margin-left: 1.25rem; }
+      margin-left: 1.25rem;
+      margin-top: 2rem; }
       #gridAdoptar1 .textoAdopcion p {
         font-size: 1.6rem; }
+  .contenedorAdopcion {
+    width: 100%; }
   #gridAdoptar2 {
-    margin-top: 1rem;
+    margin-top: 2rem;
     grid-template-rows: auto auto auto auto auto; }
     #gridAdoptar2 h3 {
       font-size: 1.5rem; }
@@ -1086,7 +1326,6 @@ body {
     .formuAdo .btn {
       font-size: 1rem; }
   .tituloAdo h2 {
-    -webkit-text-stroke: 2px black;
     color: #B590CA;
     font-size: 2rem;
     font-weight: bold;
@@ -1095,9 +1334,9 @@ body {
     margin-top: 1.25rem; }
   /*donaciones*/
   p {
-    font-size: 1rem; }
-  .contenedorDonar p, .botonDonar p {
-    font-size: 1rem; }
+    font-size: 1.5rem; }
+  .contenedorDonar p {
+    font-size: 1.5rem; }
   .botonDonar {
     margin-top: 0; }
     .botonDonar a {
@@ -1105,18 +1344,20 @@ body {
       background-color: #B590CA;
       border-radius: 1.5rem;
       padding: 8px; }
-  .contenedorDonar, .botonDonar {
+  .contenedorDonar {
     margin-top: 0px; }
-    .contenedorDonar h3, .botonDonar h3 {
-      -webkit-text-stroke: 2px black;
-      color: #A8D3DA;
+    .contenedorDonar h3 {
+      color: #132c33;
       font-size: 2rem;
       font-weight: bold; }
-  .contenedorAyuda h2, .contenedorDonar h2, .botonDonar h2 {
-    -webkit-text-stroke: 2px black;
-    color: #A8D3DA;
+    .contenedorDonar p {
+      font-size: 1.5rem; }
+  .contenedorAyuda h2, .contenedorDonar h2 {
+    color: #132c33;
     font-size: 2rem;
     font-weight: bold; }
+  .contenedorAyuda strong, .contenedorDonar strong {
+    font-size: 1.5rem; }
   .contenedorGranito p {
     font-size: 2rem;
     text-align: center; }
@@ -1183,13 +1424,19 @@ body {
   #gridSesion {
     grid-template-columns: 60%; }
   #formInicioSesion {
-    height: 28rem; }
+    height: 30rem; }
     #formInicioSesion form label {
       margin-left: 95px; }
     #formInicioSesion form .btn {
       margin-left: 5px; }
     #formInicioSesion form a {
-      margin-left: 45px; }
+      margin-left: 65px; }
+    #formInicioSesion #emailHelp {
+      display: none; }
+  #formInicioSesion form .btn {
+    margin-left: 0px; }
+  #formInicioSesion form a {
+    margin-left: 0px; }
   /*tuCuenta*/
   .formu .row {
     display: flex;
@@ -1198,3 +1445,122 @@ body {
     margin-left: 70px; }
   .formu .col.right {
     margin-left: 70px; } }
+
+@media (max-width: 420px) {
+  .navbar .navbar-toggler {
+    font-size: 2rem; }
+  .navbar li {
+    font-size: 1.5rem; }
+  /*adoptar*/
+  #gridAdoptar1 {
+    margin-top: 2rem;
+    justify-content: left;
+    margin-left: 0px;
+    grid-template-columns: 50% 50%; }
+    #gridAdoptar1 .textoAdopcion {
+      margin-left: 0px;
+      width: 97%; }
+      #gridAdoptar1 .textoAdopcion p {
+        font-size: 1.3rem; }
+  .contenedorAdopcion {
+    width: 100%;
+    margin: 0; }
+    .contenedorAdopcion ul {
+      margin-right: 1rem; }
+      .contenedorAdopcion ul li {
+        line-height: 2rem; }
+  .imgAdopcion {
+    margin-left: 3rem; }
+  #gridAdoptar2 {
+    margin-top: 6rem; }
+    #gridAdoptar2 a {
+      padding: 0;
+      font-size: 9px; }
+  #gridAdoptar3 a {
+    padding: 0;
+    font-size: 9px; }
+  /*trasito*/
+  .formuTran label {
+    font-weight: bold; }
+  /*IniciaSesión*/
+  #formInicioSesion form .btn {
+    margin-left: 0px; }
+  #formInicioSesion form a {
+    margin-left: 0px; }
+  /*donaciones*/
+  .btn-group-lg > .btn, .btn-lg {
+    font-size: 1.5rem; } }
+
+@media (max-width: 320px) {
+  /*index*/
+  .mapa1 iframe {
+    width: 100%;
+    height: 50%; }
+  .titulo2 {
+    padding-right: 1rem; }
+  .principal2 {
+    display: none; }
+  .titulo2 {
+    margin-bottom: 1.5rem; }
+  #gridMain4 {
+    margin-top: 2rem; }
+    #gridMain4 .contenedorTips1, #gridMain4 .contenedorTips2, #gridMain4 .contenedorTips3, #gridMain4 .contenedorTips4 {
+      padding: 20px; }
+  .navbar img {
+    width: 100px; }
+  .navbar .d-flex input {
+    font-size: 1rem; }
+  /*adoptar*/
+  .contenedorAdopcion {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 2rem; }
+    .contenedorAdopcion ul {
+      margin-right: 1rem; }
+      .contenedorAdopcion ul li {
+        line-height: 2rem; }
+  .textoAdopcion {
+    display: none; }
+  .imgAdopcion {
+    margin-top: 1rem; }
+  #gridAdoptar2 {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px auto 50px auto 50px auto 50px auto 50px;
+    grid-template-areas: "a1 a1" "a2 a3" "a8 a9" "a4 a5" "a10 a11" "a14 a15" "a20 a21" "a16 a17" "a22 a23";
+    margin-right: 0px; }
+    #gridAdoptar2 a {
+      padding: 0;
+      font-size: 1.5rem; }
+  #gridAdoptar3 {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px auto 50px auto 50px auto 50px auto 50px;
+    grid-template-areas: "a1 a1" "a2 a3" "a8 a9" "a4 a5" "a10 a11" "a14 a15" "a20 a21" "a16 a17" "a22 a23";
+    margin-right: 0px; }
+    #gridAdoptar3 a {
+      padding: 0;
+      font-size: 1.5rem; }
+  #gridAdoptar1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px; }
+  .tituloPerro {
+    padding-top: 1rem; }
+  .tituloGato {
+    padding-top: 1rem; }
+  /*transito*/
+  .contenedorConseguir p {
+    font-size: 1rem; }
+  /*inicioSesion*/
+  #formInicioSesion form .btn {
+    margin-left: 0px; }
+  #formInicioSesion form a {
+    margin-left: 0px; }
+  /*donaciones*/
+  .contenedorPago {
+    margin-top: 2rem; }
+  .btn-group-lg > .btn, .btn-lg {
+    font-size: 1rem; } }

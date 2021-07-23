@@ -11,20 +11,29 @@ html { /* etiqueta raíz */
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
-   padding-left: 30px;
-   padding-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     overflow-x: auto;
+    background: whitesmoke;
+    transition: .3s ease all;
+    &.dark{
+        background:#303a52;
+    }
     p{
         text-align: justify;
+       
     }
 }
 .flexMain1{
     
     display: flex;
     background-color: $colorMorado;
-    margin-top: 1.875rem;
-    border-radius: 15px;
-   
+    margin-top: 3rem;
+    border-radius: $redondeado;
+    
+    body.dark &{
+        background:$oscuro1;
+    }
     .contenedorTexto{
         padding: 1.25rem;
     }
@@ -37,10 +46,12 @@ body{
     }
     h1{
        
-        color:#a8d3da ;
-        -webkit-text-stroke: 2px #132c33;
-        font-size:3rem;
-        font-weight: bold;
+        color:whitesmoke;
+        margin-bottom: 1rem;
+        font-size:3.2rem;
+        font-weight:bold;
+       
+        
         
         }
    
@@ -48,8 +59,11 @@ body{
 .flexMain2{
     display: flex;
     background-color: $colorMorado;
-    margin-top: 1.875rem;
-    border-radius: 15px;
+    margin-top: 3rem;
+    border-radius: $redondeado;
+    body.dark &{
+        background:$oscuro1;
+    }
     .contenedorTexto2{
         padding: 1.25rem;
     }
@@ -61,11 +75,12 @@ body{
     }
     h2{
         
-        color:#a8d3da ;
-        -webkit-text-stroke: 2px #132c33;
+        color:whitesmoke;
+        margin-bottom: 1rem;
         font-size:3rem;
         font-weight: bold;
         text-align: center;
+       
     }
 }
 
@@ -76,7 +91,7 @@ body{
     grid-template-areas:
     "area2 area3 area4 area5"
     "area6 area7 area8 area9";
-    margin-top: 2.5rem;
+    margin-top: 3rem;
 }
 .opcion1{
     grid-area: area2;
@@ -86,44 +101,25 @@ body{
   }
   .opcion2{
     @extend.opcion1;
-    grid-area: area3;
-    
-
-    
-  }
+    grid-area: area3;}
   .opcion3{
     @extend.opcion1;
-    
-    grid-area: area4;
-   
-  
-  }
+    grid-area: area4;}
   
   .opcion4{
     @extend.opcion1;
-    
-    grid-area: area5;
-    
-  
-  }
+    grid-area: area5;}
   .opcion{
     @extend.opcion1;
-    grid-area: area6;
-    
-  
-  }
+    grid-area: area6;}
   .opcionDos{
     @extend.opcion1;
-    grid-area: area7;
-    
-  }
+    grid-area: area7;}
 
   .opcionTres{
     @extend.opcion1;
-    grid-area: area8;
-    
-    
-  }
+    grid-area: area8;}
+
   .opcionCuatro{
     @extend.opcion1;
     grid-area: area9;
@@ -134,28 +130,30 @@ body{
     width: auto;
     height: auto;
       }
-      
-  }
+}
   .rectangulo1{
       position: absolute;
       width: 95%;
       height: 55px;
       background-color: $colorRosa;
-      margin-top: 7.5rem;
+      margin-top: 9rem;
       z-index:-10;
+      body.dark &{
+        background:$oscuro2;
+    }
 }
 
 
 #gridMain4{
     display: grid;
-    grid-template-columns: 26% 20.5% 30% 20%;
+    grid-template-columns: auto auto 30% 20%;
     grid-template-rows: 60px auto auto;
     grid-template-areas: "a1 a1 a1 a2"
     "a3 a3 a4 a4"
     "a5 a5 a6 a6";
-    column-gap: 0.9375rem;
-    row-gap: 0.9375rem;
-    margin-top: 2.5rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    margin-top: 12rem;
 }
 .titulo2{
     grid-area: a1;
@@ -163,9 +161,16 @@ body{
     border-radius:0px 15px 15px 0px ;
     align-self: center;
     padding-left: 20px;
+    margin-bottom: 80px;
+    width: 80%;
+    body.dark &{
+        background:$oscuro3;
+        h3{
+            color: whitesmoke;
+        }
+    }
     h3{
-        color:$colorMorado ;
-        -webkit-text-stroke: 2px #132c33;
+        color:$colorOscuro ;
         font-size: 3rem;
         font-weight: bold;
     }
@@ -174,13 +179,14 @@ body{
 .contenedorTips1{
     grid-area: a3;
     background-color: $colorRosa;
-    border-radius: 15px;
+    border-radius: $redondeado;
+    
+    body.dark &{
+        background:$oscuro2;
+    }
     p{
-      
-        
-        padding: 20px 100px 20px 20px;
+        padding:3rem;
         text-align: justify;
-        
     }
 }
 .contenedorTips2{
@@ -188,7 +194,7 @@ body{
     grid-area: a4;
     
     p{
-        padding: 1.25rem 1.875rem 1.25rem 5rem;
+        padding: 3rem;
         text-align: justify;
     }
 }
@@ -198,9 +204,9 @@ body{
    
     p{
         
-        padding: 5.625rem 1.875rem 1.875rem 1.875rem;
+        padding: 3rem;
         text-align: justify;
-        margin-right: 3.75rem;
+        
     }
 }
 .contenedorTips4{
@@ -208,15 +214,15 @@ body{
     grid-area: a6;
     
     p{
-        padding: 3.75rem 1.875rem 1.875rem 5rem;
+        padding: 3rem;
         text-align: justify;
         margin-top: 1.875rem;
     }
 }
 .principal2{
 position: absolute;
-margin-top: 42rem;
-margin-left: 53.5rem;
+margin-top: 2rem;
+margin-left: 72.5rem;
 img{
     width: 15.625rem;
     z-index: 10;
@@ -227,8 +233,9 @@ footer{
     width: 100%;
     height: auto;
     background-color: #131313;
-   margin-top: 2.5rem;
+    margin-top: 2.5rem;
    padding: 0.9375rem;
+   border-radius: 10px;
   
    
    }
@@ -258,11 +265,15 @@ footer{
     padding: $padding;
 }
 #gripMain2{
+   
     a{
         @include botones(2rem, $colorMorado, 15px, 8px);
         text-decoration: none;
         color: $colorOscuro;
         font-weight: bold;
+        body.dark &{
+            background:$oscuro1;
+        }
     }
     a:hover{
         color:seashell;
@@ -272,15 +283,30 @@ footer{
 
 .nav-item a{
     color:#131313!important;
-    font-weight: bold;
+    font-size: 1.9rem;
+    body.dark &{
+        color: whitesmoke !important;
+        &:hover{
+            color:$oscuro1 !important; 
+        }
+    }
     }
     .nav-item a:hover{
       color:$colorMorado !important;
     }
 
 .navbar{
-    border-top: 1px solid #afadad;
-    border-bottom: 1px solid #afadad;
+    //border-top: 1px solid #afadad;
+    //border-bottom: 1px solid #afadad;
+    -webkit-box-shadow: 1px 1px 20px 10px #D1D1D1;
+    box-shadow: 1px 1px 20px 10px #D1D1D1;
+    border-radius: 10px;
+body.dark &{
+    -webkit-box-shadow: 1px 1px 20px 10px #2E2E2E;
+box-shadow: 1px 1px 20px 10px #2E2E2E;
+}
+    
+   
     .btn:hover{
         background-color: $colorMorado;
         }
@@ -291,5 +317,61 @@ footer{
 }
 .contenedorI{
     width: 100%;
+
 }
+#carouselExampleControls{
+    margin-top: 30px;
+}
+.carousel-inner{
+    border-radius: $redondeado;
+  
+    img{
+
+        border-radius: $redondeado;
+        
+    }
+    }
+
+    .switch{
+        margin-right: 2rem;
+        background: $colorOscuro;
+        border-radius: 1000px;
+        border: none;
+        position: relative;
+        outline: none;
+        display: flex;
+        cursor: pointer;
+        &::after{
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: whitesmoke;
+            top: 0;
+            left: 0;
+            right: unset;
+            border-radius: 100px;
+            transition: .3s ease all;
+            box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+        }
+        &.active{
+            background:orange;
+            color: #fff;
+            &::after {
+                right: 0;
+                left: unset;
+            }
+        }
+        
+        span{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            background: none;
+            color: #fff;
+        }
+    }
+    
 

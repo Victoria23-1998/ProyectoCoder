@@ -2,10 +2,14 @@ $colorAzul:#A8D3DA;
 $colorMorado:#B590CA;
 $colorRosa:#f5cab3;
 $colorOscuro:#132c33;
-$border:2px black;
+$oscuro1:#9E579D;
+$oscuro2:#FC85AE;
+$oscuro3:#574B90;
+$oscuroFondo:#303A52;
+$redondeado:15px;
 $fontWeight:bold;
-@mixin estiloTitulo ($border,$color,$font,$fontWeight){
-    -webkit-text-stroke:$border;
+@mixin estiloTitulo ($color,$font,$fontWeight){
+    
     color:$color;
     font-size: $font;
     font-weight:$fontWeight;
