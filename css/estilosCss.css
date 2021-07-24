@@ -999,6 +999,8 @@ body {
     margin-right: 200px; }
 
 @media (max-width: 768px) {
+  .switch {
+    margin-bottom: 2rem; }
   /*index*/
   body {
     font-size: 1rem;
@@ -1207,6 +1209,8 @@ body {
     margin-left: 0px; } }
 
 @media (max-width: 600px) {
+  .switch {
+    margin-bottom: 2rem; }
   /*index*/
   body {
     font-size: 1rem;
@@ -1447,6 +1451,8 @@ body {
     margin-left: 70px; } }
 
 @media (max-width: 420px) {
+  .switch {
+    margin-bottom: 2rem; }
   .navbar .navbar-toggler {
     font-size: 2rem; }
   .navbar li {
@@ -1563,4 +1569,6 @@ body {
   .contenedorPago {
     margin-top: 2rem; }
   .btn-group-lg > .btn, .btn-lg {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .switch {
+    margin-bottom: 2rem; } }
